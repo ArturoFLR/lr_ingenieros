@@ -1,0 +1,24 @@
+.header {
+	width: 100%;
+	height: 97px;
+	// border: 1px solid black;
+}
+
+.mainLabel {
+	width: 100%;
+
+	.slideshow {
+		width: 64.5%;
+		margin: auto;
+	}
+}
+
+@media (max-width: 1920px) {
+	main {
+	
+		.slideshow {
+			width: 76.6%;
+			margin: auto;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+// ANIMATIONS
+@keyframes rotate {
+	0% {
+		transform: rotateX(90deg);
+		visibility: hidden;
+	}
+	100% {
+		transform: rotateX(0deg);
+		visibility: visible;
+	}
+}
+
+// STYLES
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-image: linear-gradient(to top, rgb(66, 111, 111), rgb(217, 222, 228));
+	backdrop-filter: blur(15px);
+	padding: 2rem 0rem;
+
+
+	.logo {
+		width: 15%;
+		border: 3px solid black;
+		margin-bottom: 2rem;
+		visibility: hidden;
+	}
+
+	.logoAnimation {
+		animation: rotate 3s forwards;
+	}
+
+	.phone_mail {
+		color: white;
+		font-size: 1.5rem;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 500;
+
+		a {
+			color: rgb(8, 227, 213);
+			text-decoration: none;
+			transition-property: color scale;
+			transition-duration: 200ms;
+			
+			&:hover {
+				color: rgb(13, 182, 185);
+			}
+		}
+	}
+}

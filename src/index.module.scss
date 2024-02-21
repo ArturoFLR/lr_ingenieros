@@ -1,0 +1,26 @@
+@import "./reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+	/* font-family: 'Roboto Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+	/* font-family: 'PT Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+/* font-family: 'Catamaran', sans-serif; */
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/* background-image: linear-gradient(to top, rgb(66, 111, 111), rgb(217, 222, 228)); */
+	background-image: url("@/fondo_principal2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+}
+

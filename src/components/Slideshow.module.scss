@@ -1,0 +1,200 @@
+// ANIMATIONS
+
+// Efecto de zoom sobre la imagen principal
+@keyframes zoomIn {
+	from {transform: scale(1);}
+	to {transform: scale(1.3)}
+}
+
+//Efecto de fundido en la imagen principal
+@keyframes fadeImg {
+	0% {opacity: 100%;}
+	50% {opacity: 0%;}
+	100% {opacity: 100%;}
+}
+
+//Efecto de fundido en los textos de la imagen principal
+@keyframes fadeCaption {
+	0% {opacity: 100%;}
+	75% {opacity: 0%;}
+	100% {opacity: 0%;}
+}
+
+// Anima los textos de la imagen principal
+@keyframes caption1Arise {
+	from {
+		top: 25%;
+		opacity: 0%;
+	}
+	to {
+		top: 4%;
+		opacity: 100%;
+	}
+}
+
+@keyframes caption2Arise {
+	from {
+		top: 30%;
+		opacity: 0%;
+	}
+	to {
+		top: 9.5%;
+		opacity: 100%;
+	}
+}
+
+// Aumenta el tamaño del thumbnail seleccionado
+@keyframes thumbGrow {
+	from {transform: scale(1);}
+	to {transform: scale(1.5)}
+}
+
+@keyframes thumbDecrease {
+	from {transform: scale(1.5);}
+	to {transform: scale(1)}
+}
+
+
+// STYLES
+
+.mainContainer {
+	position: relative;
+	width: 100%;
+	max-height: calc(100vh - 97px);					// 97px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
+	border: 2.5px solid white;
+	border-radius: 17px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.caption, .caption2 {
+	position: absolute;
+	top: 4%;
+	right: 7%;
+	font-size: 1.4rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	color: white;
+	cursor: pointer;
+	z-index: 1;
+	opacity: 0%;
+}
+
+.caption2 {
+	top: 9.5%;
+}
+
+// Animaciones de los caption (textos) de la imagen:
+.captionAnimation {
+	animation: caption1Arise 1.5s forwards;
+}
+
+.caption2Animation {
+	animation: caption2Arise 2s forwards;
+}
+
+.fadeCaption {
+	animation: fadeCaption 800ms forwards;
+}
+//Fin de animaciones de captions
+
+.selectedImg {
+	display: block;
+	width: 100%;
+}
+
+// Animaciones de la imagen principal
+// Zoom-in
+.selectedImgZoomIn {
+	animation: zoomIn 20s forwards;
+}
+
+// Fade-out
+.fadeOutIn {
+	animation: fadeImg 800ms forwards;
+}
+
+.buttonPrev, .buttonNext {
+	position: absolute;
+	top: 47%;
+	padding: 1rem;
+	color: white;
+	font-size: 2rem;
+	font-weight: 500;
+	background-color: rgba(0, 0, 0, 0.103);
+	border: 0px solid rgba(255, 255, 255, 0.455);
+	transition-property: background-color, border, padding;
+	transition-duration: 500ms;
+	z-index: 2;
+
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(0, 0, 0, 0.349);
+		border: 2px solid rgba(255, 255, 255, 0.796);
+		padding: 1.2rem;
+	}
+
+	&:active {
+		background-color: rgba(255, 255, 255, 0.693);
+		padding: 1rem;
+	}
+}
+
+.buttonPrev {
+	left: 1%;
+}
+
+.buttonNext {
+	right: 1%;
+}
+
+.thumbnailContainer {
+	display: flex;
+	position: absolute;
+	bottom: 1%;
+	width: 100%;
+	border: 4px solid rgba(0, 0, 0, 0.53);
+	border-right: 0px;
+	border-left: 0px; 
+	overflow: show;
+	z-index: 2;
+	
+	&:hover {
+		cursor: pointer;
+	}
+
+	.thumbnail {
+		width: 100%;
+		opacity: 65%;
+		
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		&:hover {
+			opacity: 100%;
+		}
+	}
+
+	.thumbnailDeselected {
+		img {
+			animation: thumbDecrease 600ms forwards;
+		}
+
+	}
+
+	.thumbnailSelected {
+		box-sizing: border-box;
+		z-index: 2;
+
+		img {
+			border: 2px solid rgba(255, 255, 255, 0.934);
+			animation: thumbGrow 600ms forwards;
+		}
+	}
+
+
+}
+
+
