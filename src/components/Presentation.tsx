@@ -4,41 +4,32 @@ import styles from "./Presentation.module.scss";
 function Presentation() {
 
 	const iconsContainer = useRef(null);
-	const iconsTexts = useRef(null);	// Este useRef lo estamos usando para guardar una variable, ya que quiero seleccionar 3 párrafos, pero sólo toma el valor del último elemento con el atributo "ref= iconsTexts". Ignora los otros 2. Por tanto, le asigno yo un array de elementos como valor desde useEffect.
-	const iconsFrames = useRef(null);
+	const iconsTexts = useRef<NodeListOf<Element> | null>(null);	// Este useRef lo estamos usando para guardar una variable, ya que quiero seleccionar 3 párrafos, pero sólo toma el valor del último elemento con el atributo "ref= iconsTexts". Ignora los otros 2. Por tanto, le asigno yo un array de elementos como valor desde useEffect.
+	const iconsFrames = useRef<NodeListOf<Element> | null>(null);
 
 	//Observador para activar animaciones CSS cuando se llega al elemento mediante scroll
-	const iconsContainerObserver = new IntersectionObserver( (entries) => {
-		const iconsTextsArray = Array.from(iconsTexts.current);
-		const iconsFramesArray = Array.from(iconsFrames.current);
+	const iconsContainerObserver = new IntersectionObserver((entries) => {
+		const iconsTextsArray = Array.from(iconsTexts.current as NodeListOf<Element>);
+		const iconsFramesArray = Array.from(iconsFrames.current as NodeListOf<Element>);
 
 		if (entries[0].isIntersecting) {
-			iconsContainer.current.classList.add(styles.iconsContainerAnimation);
+			(iconsContainer.current! as HTMLDivElement).classList.add(styles.iconsContainerAnimation);
 
-			iconsTextsArray.map( (element) => {
+			iconsTextsArray.map((element) => {
 				element.classList.add(styles.iconTextsAnimation);
 			});
 
-			iconsFramesArray.map( (element) => {
+			iconsFramesArray.map((element) => {
 				element.classList.add(styles.iconFrameAnimation);
 			});
-		}else {
-			iconsContainer.current.classList.remove(styles.iconsContainerAnimation);
-			iconsTextsArray.map( (element) => {
-				element.classList.remove(styles.iconTextsAnimation);
-			});
-			iconsFramesArray.map( (element) => {
-				element.classList.remove(styles.iconFrameAnimation);
-			});
-
 		}
-	}, {root: null});
+	}, { root: null });
 
 	//El elemento a observar por el Observador debe definirse aquí, ya que hasta que la página no ha cargado por completo iconsContainer.current no contiene nada (null)
-	useEffect( () => {
+	useEffect(() => {
 		iconsTexts.current = document.querySelectorAll(`.${styles.iconsContainer} p`);
 		iconsFrames.current = document.querySelectorAll(`.${styles.iconFrame}`);
-		iconsContainerObserver.observe(iconsContainer.current);
+		iconsContainerObserver.observe(iconsContainer.current! as HTMLDivElement);
 	}, []);
 
 	return (
@@ -46,45 +37,54 @@ function Presentation() {
 
 			<div className={styles.textContainer}>
 				<h1 className={styles.mainParagraph}>
-					<span className={styles.brand}>L & R Servicios de Ingeniería</span>, señora, diseña hoteles, centrales nucleares, sillones, mecedoras, descalzadoras... en la puerta de su propio domicio.
+					<span className={styles.brand}>L & R Ingenieros</span> te ofrece las soluciones a tus Proyectos de Instalaciones en Edificiación.
 				</h1>
-				<p className={styles.mainParagraph}>Somos una empresa comprometida con la <span>conciliación familiar</span>, gestionando sus más importantes proyectos desde el salón de nuestra casa, mientras hacemos la comida o vemos a Ana Rosa.</p>
-				<p>Utilizamos las últimas tecnologías de cálculo y diseño <span>disponibles en el Emule</span>. Si nuestro proyecto le da algún error de licencia, ¡llámenos!</p>
+				<p className={styles.mainParagraph}>Desde la fase de <span>Anteproyecto</span> hasta la Asistencia Técnica en obra, te acompañamos en el diseño de tu Edificio hasta alcanzar los objetivos de <span>calidad y eficiencia</span> deseados.</p>
+				<p>Tanto en edificación singular como en edificios residenciales, la <span>amplia experiencia</span> y formación de nuestros técnicos garantizarán la optimización de cada Proyecto, en cuanto a eficiencia energética, facilidad de mantenimiento, control y regulación de la energía, cumplimiento de normativa y <span>costes de implantación competitivos.</span></p>
 			</div>
 
 			<div className={styles.iconsContainer} ref={iconsContainer}>
 				<div className={styles.iconFrame}>
 					<img src="icons/icon_compass.svg" alt=""></img>
 				</div>
-				<p>Ahora con un rasca y gana en todos nuestros planos </p>
+				<p>Elaboración de Proyectos Básicos y de Ejecución de Instalaciones</p>
 
 				<div className={styles.iconFrame}>
 					<img src="icons/icon_direccion_obra.svg" alt=""></img>
 				</div>
-				<p>Estamos presentes durante la obra, para ver si nos dan algo</p>
+				<p>Asistencia Técnica en obra, informes, revisión de proyectos y auditorías</p>
 
 				<div className={styles.iconFrame}>
 					<img src="icons/icon_building1.svg" alt=""></img>
 				</div>
-				<p>Garantizamos que el edificio sigue en pie durante 2 años</p>
+				<p>Cubrimos todas las instalaciones necesarias en Edificación, tanto eléctricas como mecánicas</p>
 			</div>
 
 			<div className={styles.opinionsContainer}>
 				<div className={styles.pictureOpinionContainer}>
 					<div className={styles.pictureContainer}>
-						<img src="img/maricon&tontico.jpg" className={styles.picture} alt="Maricón y Tontico"></img>
+						<img src="img/gynkgo-logo.jpg" className={styles.picture} alt="Gynkgo Ingenieros"></img>
 					</div>
 					<p className={styles.opinion}>
-						Lourdes y Rafa son muy buenos; nunca nos han mordido.
+						Lo mejor de L&R es el trato cercano y la facilidad de hacer equipo para disfrutar el proceso de hacer un buen proyecto.
 					</p>
 				</div>
 
 				<div className={styles.pictureOpinionContainer}>
 					<div className={styles.pictureContainer}>
-						<img src="img/L&R.jpg" className={styles.picture} alt="Lourdes y Rafa"></img>
+						<img src="img/zeroaplus-logo.jpg" className={styles.picture} alt="Zeroaplus Consultoria e Ingenieria"></img>
 					</div>
 					<p className={styles.opinion}>
-						Estate tranquilo. ¡Tontos no somos!
+						Más de 200 informes de consultoría técnica realizados con ellos y con ganas de seguir colaborando en muchos más.
+					</p>
+				</div>
+
+				<div className={styles.pictureOpinionContainer}>
+					<div className={styles.pictureContainer}>
+						<img src="img/proyecta-logo.jpg" className={styles.picture} alt="Proyecta! Servicios de Ingeniería"></img>
+					</div>
+					<p className={styles.opinion}>
+						Llevamos más de 15 años trabajando juntos en todo tipo de proyectos y direcciones de obra, somos como un gran equipo.
 					</p>
 				</div>
 			</div>

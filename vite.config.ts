@@ -11,10 +11,10 @@ const __dirname = dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
-	// base: "/lourdes_rafa_web/",
+	// base: "/lr_ingenieros/",
 	resolve: {
 		alias: {
-			"@": path.resolve(__dirname, "./public/backgrounds"),
+			"@": path.resolve(__dirname, "./public"),
 		},
 	},
 });

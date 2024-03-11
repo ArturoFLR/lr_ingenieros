@@ -1,0 +1,12 @@
+.mainContainer {
+	display: flex;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 4px 2px 8px rgba(120, 120, 120, 0.75);
+
+	img {
+		width: 50%;
+	}
+}

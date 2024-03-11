@@ -1,3 +1,5 @@
+@use "../colorsAndFonts" as * ;
+
 // ANIMATIONS
 
 // Efecto de zoom sobre la imagen principal
@@ -43,6 +45,18 @@
 	}
 }
 
+// Anima el enlace al proyecto mostrado en la imagen principal
+@keyframes proyectLinkArise {
+	from {
+		top: 35%;
+		opacity: 0%;
+	}
+	to {
+		top: 15%;
+		opacity: 100%;
+	}
+}
+
 // Aumenta el tamaño del thumbnail seleccionado
 @keyframes thumbGrow {
 	from {transform: scale(1);}
@@ -60,18 +74,27 @@
 .mainContainer {
 	position: relative;
 	width: 100%;
-	max-height: calc(100vh - 97px);					// 97px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
+	height: calc(100vh - 97px);					// 97px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
 	border: 2.5px solid white;
 	border-radius: 17px;
 	background-color: white;
 	overflow: hidden;
+
+	.darkener {
+		position: absolute;
+		width: 100%;
+		height: 30%;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.454), rgba(0, 0, 0, 0));
+		z-index: 1;
+	}
 }
 
-.caption, .caption2 {
+.caption, .caption2, .proyectLink {
 	position: absolute;
 	top: 4%;
 	right: 7%;
 	font-size: 1.4rem;
+	font-weight: 500;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
 	color: white;
@@ -82,6 +105,23 @@
 
 .caption2 {
 	top: 9.5%;
+	font-size: 1.2rem
+}
+
+.proyectLink {
+	top: 15%;
+	text-transform: capitalize;
+	text-decoration: none;
+	border: 1px solid white;
+	padding: 0.5rem;
+	font-size: 1.1rem;
+	transition-property: background-color color;
+
+	&:hover {
+		transition-duration: 500ms;
+		background-color: white;
+		color: black;
+	}
 }
 
 // Animaciones de los caption (textos) de la imagen:
@@ -93,6 +133,10 @@
 	animation: caption2Arise 2s forwards;
 }
 
+.proyectLinkArise {
+	animation: proyectLinkArise 2s forwards;
+}
+
 .fadeCaption {
 	animation: fadeCaption 800ms forwards;
 }
@@ -101,6 +145,7 @@
 .selectedImg {
 	display: block;
 	width: 100%;
+	height: 100%;
 }
 
 // Animaciones de la imagen principal
@@ -124,7 +169,7 @@
 	background-color: rgba(0, 0, 0, 0.103);
 	border: 0px solid rgba(255, 255, 255, 0.455);
 	transition-property: background-color, border, padding;
-	transition-duration: 500ms;
+	transition-duration: 200ms;
 	z-index: 2;
 
 	&:hover {
@@ -153,6 +198,7 @@
 	position: absolute;
 	bottom: 1%;
 	width: 100%;
+	height: 12%;
 	border: 4px solid rgba(0, 0, 0, 0.53);
 	border-right: 0px;
 	border-left: 0px; 
@@ -169,6 +215,7 @@
 		
 		img {
 			width: 100%;
+			height: 100%;
 			display: block;
 		}
 
@@ -185,6 +232,7 @@
 	}
 
 	.thumbnailSelected {
+		opacity: 100%;
 		box-sizing: border-box;
 		z-index: 2;
 

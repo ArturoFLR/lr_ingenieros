@@ -4,22 +4,20 @@ import styles from "./Footer.module.scss";
 function Footer() {
 	const logo = useRef(null);
 
-	const logoObserver = new IntersectionObserver( (entries) => {
+	const logoObserver = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			logo.current.classList.add(styles.logoAnimation);
-		}else {
-			logo.current.classList.remove(styles.logoAnimation);
+			(logo.current! as HTMLImageElement).classList.add(styles.logoAnimation);
 		}
-	}, {root: null, threshold: 0.5});
+	}, { root: null, threshold: 0.5 });
 
-	useEffect( () => {
-		logoObserver.observe(logo.current);
+	useEffect(() => {
+		logoObserver.observe(logo.current! as HTMLImageElement);
 	});
 
 	return (
 		<footer className={styles.footer}>
 			<img className={styles.logo} src="img/logo.jpg" ref={logo}></img>
-			<p className={styles.phone_mail}>Tel: 914755004 - 619507056 | <a href="mailto:info@l&r-ingenieros.com">info@l&r-ingenieros.com</a></p>
+			<p className={styles.phone_mail}><a href="mailto:rl.rubio.lopez@gmail.com">rl.rubio.lopez@gmail.com</a></p>
 		</footer>
 	);
 }

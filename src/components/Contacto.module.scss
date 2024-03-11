@@ -1,5 +1,4 @@
-$Text_Important: rgb(70,111,169);
-$Text_Paragraph: rgb(118, 117, 117);
+@use "../colorsAndFonts" as * ;
 
 // ANIMATIONS
 @keyframes fadeIn {
@@ -30,7 +29,7 @@ $Text_Paragraph: rgb(118, 117, 117);
 	margin: auto;
 	height: calc(100vh - 97px);
 	background-color: white;
-	background-image: url("@/gaph_paper1.jpg");
+	background-image: url("@/backgrounds/graph_paper1.jpg");
 	background-repeat: repeat-x;
 	background-size: cover;
 }
@@ -42,24 +41,38 @@ $Text_Paragraph: rgb(118, 117, 117);
 
 .frame {
 	position: relative;
-	padding: 3.5rem;
-	font-family: 'PT Sans', sans-serif;
+	width: 440px;
+	height: 230px;
+	padding: 2rem 2.5rem;
+	font-family: 'Roboto Condensed', sans-serif;
 	text-align: center;
 
 	.header {
-		font-size: 2rem;
+		font-size: 2.1rem;
 		font-weight: 800;
 		color: $Text_Important;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 		opacity: 0%;
 	}
-	
-	.phoneMail {
+
+	.subHeader {
 		font-size: 1.3rem;
-		font-weight: 600;
+		font-weight: 800;
 		color: $Text_Paragraph;
-		margin-top: 1rem;
+		font-family: 'PT Sans', sans-serif;
 		opacity: 0%;
+	}
+
+	.mailParagraph {
+		font-size: 1.3rem;
+		margin-top: 2rem;
+		opacity: 0%;
+
+		.mailLink {
+			font-weight: 600;
+			color: $Black;
+			text-decoration: none;
+		}
 	}
 
 	.textAnimation {

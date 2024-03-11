@@ -3,11 +3,16 @@ import Header from "../components/Header";
 import Slideshow from "../components/Slideshow";
 import Presentation from "../components/Presentation";
 import Footer from "../components/Footer";
-import { proyectsMainImgs } from "../components/SlideshowProps";
+import { Helmet } from "react-helmet";
+import { proyectsMainImgs } from "../data/SlideshowMainImgs";
 
 function Home() {
 	return (
 		<>
+			<Helmet>
+				<title>RL Ingenieros - Inicio</title>
+			</Helmet>
+
 			<div className={styles.header}>
 				<Header />
 			</div>
