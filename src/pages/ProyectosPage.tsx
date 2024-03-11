@@ -8,7 +8,7 @@ function ProyectosPage() {
 	return (
 		<>
 			<Helmet>
-				<title>RL Ingenieros - Quienes Somos</title>
+				<title>RL Ingenieros - Proyectos</title>
 			</Helmet>
 
 			<div className={styles.header}>
