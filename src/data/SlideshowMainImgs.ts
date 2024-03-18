@@ -20,7 +20,7 @@ export const proyectsMainImgs = [
 	{
 		path: "img/projects/edificacion_singular/alto_horno_sestao/alto-horno-sestao-01.png",
 		caption: "Restauración del Alto Horno de Sestao",
-		caption2: "ATC Proyecta - SESTAO BERRI SAMP"
+		caption2: "ATC Proyecta - SESTAO BERRI S.A.M.P."
 	},
 	{
 		path: "img/projects/viviendas_sector_publico/viviendas_valdelasfuentes/viviendas-valdelasfuentes-01.jpg",

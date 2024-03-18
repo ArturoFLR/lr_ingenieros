@@ -29,7 +29,7 @@
 	align-items: center;
 	overflow: hidden;
 	width: 100%;
-	padding: 3rem;
+	padding: 3rem 3rem 6rem 3rem;
 	background-color: white;
 	background-image: url("@/backgrounds/bg-pattern-top-desktop-medium.svg");
 	background-size: cover;
@@ -41,7 +41,7 @@
 	align-self: flex-start;
 	padding: 1rem 1rem 1rem 5.7rem;
 	margin-left: -6rem;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 	font-size: 3rem;
 	color: $Text_Important;
 	background-color: rgb(242, 242, 242);
@@ -70,7 +70,7 @@
 		border: 25px solid rgb(234, 233, 233);
 		border-radius: 50%;
 		overflow: hidden;
-		background-image: url(../../public/img/projects/junta_puente_vallecas/junta-municipal-puente-de-vallecas-03.png);
+		background-image: url("@/img/projects/edificacion_singular/junta_puente_vallecas/junta-municipal-puente-de-vallecas-03.png");
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
@@ -83,7 +83,7 @@
 	.block2ImgContainer {
 		opacity: 0%;
 		margin-right: 2rem;
-		background-image: url(../../public/img/projects/junta_puente_vallecas/junta-municipal-puente-de-vallecas-01.png);
+		background-image: url("@/img/projects/edificacion_singular/junta_puente_vallecas/junta-municipal-puente-de-vallecas-01.png");
 	}
 
 	.imgAnimation {

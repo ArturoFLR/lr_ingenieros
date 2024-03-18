@@ -1,0 +1,146 @@
+@use "../../colorsAndFonts" as * ;
+
+@keyframes nextImgAnimation {
+	0% {margin-right: 0%;}
+	100% {margin-right: 200%;}
+}
+
+@keyframes prevImgAnimation {
+	0% {margin-left: 0%;}
+	100% {margin-left: 200%;}
+}
+
+
+.mainContainer {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: $BlackTransparent;
+	z-index: 1;
+}
+
+.imageContainer {
+	position: relative;
+	width: 800px;
+	height: 500px;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("@/backgrounds/gruas-1.jpg");
+}
+
+.filter {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(3px) brightness(50%);
+	overflow: hidden;
+	width: 800px;
+	height: 500px;
+	border-radius: 10px;
+	border: 2px solid $White;
+
+	.mainImg, .prevImg, .nextImg {
+		width: 800px;
+
+		img {
+			width: 800px;
+		}
+	}
+
+	.prevImgAnimated {
+		animation: prevImgAnimation 400ms forwards;
+	}
+
+	.nextImgAnimated {
+		animation: nextImgAnimation 400ms forwards;
+	}
+
+	.buttonPrev, .buttonNext {
+		position: absolute;
+		top: 45%;
+		padding: 1rem;
+		background-color: $BlackVeryTransparent;
+		color: $White;
+		font-size: 25px;
+		font-weight: 800;
+		cursor: pointer;
+		border: none;
+		transition-property: background-color border;
+		transition-duration: 300ms;
+
+		&:hover {
+			background-color: $BlackTransparent;
+			border: 2px solid $White;
+			scale: 1.2;
+		}
+	}
+
+	.buttonPrev {
+		left: 0%;
+	}
+
+	.buttonNext {
+		right: 0%;
+	}
+}
+
+.closeIcon {
+	position: absolute;
+	top: -3%;
+	right: -2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	color: $White;
+	font-size: 25px;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: $Black;
+	border: none;
+	transition-property: border scale;
+	transition-duration: 200ms;
+
+	&:hover {
+		border: 2px solid $White;
+		scale: 1.2;
+	}
+}
+
+.cardboardContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 750px;
+	height: 100px;
+	background-image: url("@/backgrounds/blueprint-2.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: $White;
+	text-align: center;
+	font-weight: 800;
+	text-shadow: 1px 1px $Black;
+	margin-top: 0.5rem;
+	padding: 0.5rem 3.7rem 1rem 1.2rem;
+
+	.title {
+		font-size: 1.2rem;
+	}
+
+	.employer {
+		font-size: 1rem;
+		margin-top: 0.5rem;
+	}
+}

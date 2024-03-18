@@ -1,0 +1,49 @@
+@use "../../colorsAndFonts" as * ;
+
+.mainContainer {
+	position: relative; 
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 4px 2px 8px rgba(120, 120, 120, 0.75);
+	cursor: pointer;
+
+	img {
+		width: 100%;
+	}
+
+	.proyectInfoContainer{
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		opacity: 0%;
+		padding: 1.5rem;
+		background-color: $BlackTransparent;
+		transition-property: opacity;
+		transition-duration: 500ms;
+
+		&:hover {
+			opacity: 100%;
+		}
+
+		.title, .employer {
+			color: white;
+			text-align: right;
+		}
+
+		.title {
+			line-height: 120%;
+			font-size: 1.3rem;
+			font-weight: 600;
+		}
+
+		.employer {
+			margin-top: 0.5rem;
+		}
+	}
+}

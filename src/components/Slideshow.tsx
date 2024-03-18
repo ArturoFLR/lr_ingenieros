@@ -155,7 +155,7 @@ function Slideshow({ images }: SlideshowProps) {
 			<div className={styles.darkener}></div>
 			<p className={`${styles.caption} ${styles.captionAnimation}`} ref={caption1}>{mainImg.caption}</p>
 			<p className={`${styles.caption2} ${styles.caption2Animation}`} ref={caption2}>{mainImg.caption2}</p>
-			<Link to="" className={`${styles.proyectLink} ${styles.proyectLinkArise}`} ref={proyectLink}>Ver Proyecto</Link>
+			<Link to="/proyectos" className={`${styles.proyectLink} ${styles.proyectLinkArise}`} ref={proyectLink}>Ver Proyecto</Link>
 			<img className={`${styles.selectedImg} ${styles.selectedImgZoomIn}`} src={mainImg.path} alt="" ref={selectedImage}></img>
 			<button className={styles.buttonPrev} type="button" onClick={(event) => changeMainImg(event, "prev")}>&lt;</button>
 			<button className={styles.buttonNext} type="button" onClick={(event) => changeMainImg(event, "next")}>&gt;</button>
