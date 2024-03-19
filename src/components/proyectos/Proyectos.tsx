@@ -41,6 +41,11 @@ function Proyectos() {
 				Proyectos
 			</h1>
 
+			{/* <div className={styles.sectionsMainContainer}>
+				
+
+			</div> */}
+
 			<h2 className={styles.h2Header}>
 				Edificación Singular
 			</h2>
