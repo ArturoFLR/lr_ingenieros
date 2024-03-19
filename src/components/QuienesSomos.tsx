@@ -24,7 +24,7 @@ function QuienesSomos() {
 			<div className={styles.block1}>
 				<div className={styles.block1Text}>
 					<p className={`${styles.paragraph} ${styles.p1}`}>
-						Somos un equipo de <span>profesionales free-lance</span>, dedicados al desarrollo de proyectos y estudios en el ámbito de las instalaciones en Edificación desde hace <span>más de 20 años</span>.
+						Somos un equipo de <span>profesionales freelance</span>, dedicados al desarrollo de proyectos y estudios en el ámbito de las instalaciones en Edificación desde hace <span>más de 20 años</span>.
 					</p>
 
 					<p className={`${styles.paragraph} ${styles.p2}`}>

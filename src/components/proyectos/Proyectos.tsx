@@ -207,7 +207,19 @@ function Proyectos() {
 							"img/projects/viviendas_sector_publico/viviendas_valdelasfuentes/viviendas-valdelasfuentes-03.jpg"
 						]}
 						title="36 Viviendas y Garaje en el Plan Parcial Valdelasfuentes, Alcobendas"
-						employer="Intecsa-Inarsa – Empresa Municipal de la Vivienda de Alcobendas (EMVIALSA)"
+						employer="Intecsa-Inarsa - Empresa Municipal de la Vivienda de Alcobendas (EMVIALSA)"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/viviendas_sector_publico/viviendas_leganes/viviendas-leganes-01.jpg",
+							"img/projects/viviendas_sector_publico/viviendas_leganes/viviendas-leganes-02.jpg",
+						]}
+						title="3 Edificios de 108 Viviendas VPP, garajes y trasteros en “Puerta de Fuenlabrada”, Leganés, Madrid"
+						employer="GYNKGO - EMSULE (Empresa Municipal del Suelo de Leganés)"
 						handleClick ={showSlideshow}
 					/>
 				</div>
@@ -215,21 +227,226 @@ function Proyectos() {
 			</div>			
 
 
+
+
+
+
+
 			<h2 className={styles.h2Header}>
 				Viviendas Sector Privado
 			</h2>
 
+			<div className={styles.proyectCardContainer}>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/viviendas_sector_privado/viviendas_ue_124_arganda_del_rey/viviendas-ue-124-arganda-01.png"
+						]}
+						title="108 Viviendas con Garaje y Piscina en UE-124 de Arganda del Rey"
+						employer="M3 Arquitectura - CAMPORROSSO"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="Proyecto y Dirección de Obra 73 viviendas, garajes, trasteros y urbanización con piscina en Tempranales, San Sebastián de los Reyes, Madrid"
+						employer="Intecsa-Inarsa - ARJUSA"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/viviendas_sector_privado/viviendas_alcala_torrejon/viviendas-alcala-torrejon-01.jpg",
+							"img/projects/viviendas_sector_privado/viviendas_alcala_torrejon/viviendas-alcala-torrejon-02.jpg"
+						]}
+						title="Más de 10 Edificios de viviendas, garajes, trasteros y urbanización con piscina en Alcalá de Henares y Torrejón de Ardoz"
+						employer="M3 Arquitectura - CAMPORROSSO"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+			</div>
+
+
+
+
+
+			
 			<h2 className={styles.h2Header}>
 				Viviendas Unifamilares de Lujo
 			</h2>
+
+			<div className={styles.proyectCardContainer}>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_pozuelo/vivienda-unifamiliar-pozuelo-01.jpg",
+							"img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_pozuelo/vivienda-unifamiliar-pozuelo-02.jpg",
+						]}
+						title="Viviendas Unifamiliares en Pozuelo de Alarcón, Madrid"
+						employer="M3 Arquitectura - CAMPORROSSO"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_villaviciosa_odon/viviendas-unifamiliares-villaviciosa-odon-01.png",
+							"img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_villaviciosa_odon/viviendas-unifamiliares-villaviciosa-odon-02.jpg"
+						]}
+						title="Viviendas Unifamiliares y jardín con piscina en Villaviciosa de Odón, Madrid"
+						employer="SANCO-ARPA, Arquitectura y Urbanismo"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="4 Viviendas Unifamiliares con urbanización con piscina en Campo Real, Madrid"
+						employer="M3 Arquitectura"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="Diversas Viviendas Unifamiliares en Toledo, El Espinar, Velilla de San Antonio y Villalbilla"
+						employer="ARYUARQUITECTOS"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+			</div>
+
+
+
+
+
+
 
 			<h2 className={styles.h2Header}>
 				Informes Periciales
 			</h2>
 
+			<div className={styles.proyectCardContainer}>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/informes_periciales/hospital_univ_toledo/hospital-universitario-toledo-01.jpg"
+						]}
+						title="Informe sobre el Estado Final de las Instalaciones del Nuevo Hospital Universitario de Toledo"
+						employer="ATC Proyecta – UTE ACCIONA-DRAGADOS-OHL"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+			</div>
+
+
+
+
+
+
 			<h2 className={styles.h2Header}>
-				Informes Técnicos sobre Riesgos y Optimización de Proyectos:
+				Informes Técnicos sobre Riesgos y Optimización de Proyectos
 			</h2>
+
+			<div className={styles.proyectCardContainer}>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/informes_riesgos_optimizacion/viviendas_valencia/viviendas-valencia-01.jpg"
+						]}
+						title="152 Viviendas con urbanización, local social, gimnasio y piscina en Valencia"
+						employer="Zeroaplus - METROVACESA"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/informes_riesgos_optimizacion/viviendas_sevilla/viviendas-sevilla-01.jpg"
+						]}
+						title="114 viviendas, locales comerciales y garaje en Palmas Altas Sur, Sevilla"
+						employer="Zeroaplus - METROVACESA"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="Hospital de Subagudos en Eibar "
+						employer="Zeroaplus"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="Hotel IBIS, Madrid"
+						employer="Zeroaplus"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="Ampliación del Colegio Jesús-María, Madrid"
+						employer="Zeroaplus"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="Más de 80 edificios de viviendas a nivel nacional"
+						employer="Zeroaplus"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/no-image-logo.jpg"
+						]}
+						title="86 Viviendas VPPA, garajes, trasteros y locales en el Desarrollo del Este, El Cañaveral, Madrid"
+						employer="ATC Proyecta – Empresa Municipal de la Vivienda y Suelo de Madrid"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+			</div>
 
 		</div>
 	);
