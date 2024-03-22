@@ -12,10 +12,18 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="*" element={<Home />} />
+
 				<Route path="/" element={<Home />} />
+				<Route path="/lr_ingenieros" element={<Home />} />
+
 				<Route path="/contacto" element={<ContactoPage />} />
+				<Route path="/contacto/lr_ingenieros" element={<ContactoPage />} />
+
 				<Route path="/quienes_somos" element={<QuienesSomosPage />} />
+				<Route path="/quienes_somos/lr_ingenieros" element={<QuienesSomosPage />} />
+
 				<Route path="/proyectos" element={<ProyectosPage />} />
+				<Route path="/proyectos/lr_ingenieros" element={<ProyectosPage />} />
 			</Routes>
 		</BrowserRouter>
 	);
