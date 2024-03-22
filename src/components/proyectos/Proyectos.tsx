@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProyectCard from "./ProyectCard";
 import styles from "./Proyectos.module.scss";
 import SlideshowMini from "./SlideshowMini";
@@ -11,6 +11,53 @@ function Proyectos() {
 	const slideshowImages = useRef<string[]>([]);
 	const slideshowTitle = useRef<string>("");
 	const slideshowEmployer = useRef<string>("");
+
+	const header1 = useRef(null);
+	const header2 = useRef(null);
+	const header3 = useRef(null);
+	const header4 = useRef(null);
+	const header5 = useRef(null);
+	const header6 = useRef(null);
+
+	const imgObserver1 = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			(header1.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+		}
+	}, { root: null, threshold: 0 });
+
+	const imgObserver2 = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			(header2.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+		}
+	}, { root: null, threshold: 0 });
+
+	const imgObserver3 = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			(header3.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+		}
+	}, { root: null, threshold: 0 });
+
+	const imgObserver4 = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			(header4.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+		}
+	}, { root: null, threshold: 0 });
+
+	const imgObserver5 = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			(header5.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+		}
+	}, { root: null, threshold: 0 });
+
+	const imgObserver6 = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			(header6.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+		}
+	}, { root: null, threshold: 0 });
+
+
+
+
 
 	function showSlideshow (images: string[], title: string, employer: string) {
 		slideshowImages.current = images;
@@ -25,6 +72,16 @@ function Proyectos() {
 	}
 
 	
+	useEffect(() => {
+		imgObserver1.observe(header1.current! as HTMLHeadingElement);
+		imgObserver2.observe(header2.current! as HTMLHeadingElement);
+		imgObserver3.observe(header3.current! as HTMLHeadingElement);
+		imgObserver4.observe(header4.current! as HTMLHeadingElement);
+		imgObserver5.observe(header5.current! as HTMLHeadingElement);
+		imgObserver6.observe(header6.current! as HTMLHeadingElement);
+	});
+
+
 	return (
 		<div className={styles.mainContainer}>
 
@@ -41,12 +98,8 @@ function Proyectos() {
 				Proyectos
 			</h1>
 
-			{/* <div className={styles.sectionsMainContainer}>
-				
 
-			</div> */}
-
-			<h2 className={styles.h2Header}>
+			<h2 className={styles.h2Header} ref={header1}>
 				Edificación Singular
 			</h2>
 
@@ -198,7 +251,7 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header}>
+			<h2 className={styles.h2Header} ref={header2}>
 				Viviendas Sector Público
 			</h2>
 
@@ -237,7 +290,7 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header}>
+			<h2 className={styles.h2Header} ref={header3}>
 				Viviendas Sector Privado
 			</h2>
 
@@ -284,7 +337,7 @@ function Proyectos() {
 
 
 			
-			<h2 className={styles.h2Header}>
+			<h2 className={styles.h2Header} ref={header4}>
 				Viviendas Unifamilares de Lujo
 			</h2>
 
@@ -344,7 +397,7 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header}>
+			<h2 className={styles.h2Header} ref={header5}>
 				Informes Periciales
 			</h2>
 
@@ -368,7 +421,7 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header}>
+			<h2 className={styles.h2Header} ref={header6}>
 				Informes Técnicos sobre Riesgos y Optimización de Proyectos
 			</h2>
 

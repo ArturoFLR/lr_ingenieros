@@ -1,5 +1,14 @@
 @use "../../colorsAndFonts" as * ;
 
+@keyframes headersAnimation {
+	from {
+		left: 150%
+	}
+	to {
+		left: 0%;
+	}
+}
+
 .mainContainer {
 	display: flex;
 	flex-direction: column;
@@ -26,10 +35,12 @@
 }
 
 .h2Header {
+	position: relative;
+	left: 110%;
 	width: 120%;
-	padding: 1rem;
-	margin: 3rem 0rem;
-	font-size: 1.6rem;
+	padding: 2rem;
+	margin: 6rem 0rem 3rem 0rem;
+	font-size: 1.7rem;
 	font-weight: 600;
 	text-align: center;
 	color: $Text_Important;
@@ -37,12 +48,15 @@
 	box-shadow: 4px 3px 8px rgba(120, 120, 120, 0.75);
 }
 
+.animatedH2Header {
+	animation: headersAnimation 1s forwards;
+}
+
 .proyectCardContainer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	row-gap: 1rem;
-	
 	width: 100%;
 
 	.proyectCardComponent {

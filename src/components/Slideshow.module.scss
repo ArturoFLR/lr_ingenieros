@@ -36,11 +36,11 @@
 
 @keyframes caption2Arise {
 	from {
-		top: 30%;
+		top: 38%;
 		opacity: 0%;
 	}
 	to {
-		top: 9.5%;
+		top: 12.5%;
 		opacity: 100%;
 	}
 }
@@ -48,11 +48,11 @@
 // Anima el enlace al proyecto mostrado en la imagen principal
 @keyframes proyectLinkArise {
 	from {
-		top: 35%;
+		top: 45%;
 		opacity: 0%;
 	}
 	to {
-		top: 15%;
+		top: 20%;
 		opacity: 100%;
 	}
 }
@@ -74,7 +74,7 @@
 .mainContainer {
 	position: relative;
 	width: 100%;
-	height: calc(100vh - 97px);					// 97px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
+	height: calc(100vh - 120px);					// 97px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
 	border: 2.5px solid white;
 	border-radius: 17px;
 	background-color: white;
@@ -83,7 +83,7 @@
 	.darkener {
 		position: absolute;
 		width: 100%;
-		height: 30%;
+		height: 40%;
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.454), rgba(0, 0, 0, 0));
 		z-index: 1;
 	}
@@ -93,7 +93,8 @@
 	position: absolute;
 	top: 4%;
 	right: 7%;
-	font-size: 1.4rem;
+	text-align: right;
+	font-size: 1.9rem;
 	font-weight: 500;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
@@ -104,17 +105,17 @@
 }
 
 .caption2 {
-	top: 9.5%;
-	font-size: 1.2rem
+	top: 12.5%;
+	font-size: 1.5rem
 }
 
 .proyectLink {
-	top: 15%;
+	top: 20%;
 	text-transform: capitalize;
 	text-decoration: none;
 	border: 1px solid white;
-	padding: 0.5rem;
-	font-size: 1.1rem;
+	padding: 0.7rem;
+	font-size: 1.3rem;
 	transition-property: background-color color;
 
 	&:hover {
@@ -134,7 +135,7 @@
 }
 
 .proyectLinkArise {
-	animation: proyectLinkArise 2s forwards;
+	animation: proyectLinkArise 2.3s forwards;
 }
 
 .fadeCaption {

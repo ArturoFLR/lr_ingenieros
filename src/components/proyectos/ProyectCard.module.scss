@@ -10,9 +10,17 @@
 	overflow: hidden;
 	box-shadow: 4px 2px 8px rgba(120, 120, 120, 0.75);
 	cursor: pointer;
+	
+	&:hover {
+		img {
+			scale: 1.2;
+		}
+	}
 
 	img {
 		width: 100%;
+		scale: 1;
+		transition-duration: 500ms;
 	}
 
 	.proyectInfoContainer{
