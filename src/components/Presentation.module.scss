@@ -2,7 +2,7 @@
 
 //ANIMATIONS
 
-// Los iconos aparecen desde la parte inferior
+// Los iconos aparecen desde el borde derecho
 @keyframes iconAnimation {
 	from {
 		position: relative;
@@ -164,6 +164,76 @@
 				font-weight: 400;
 				margin-right: 0.6rem;
 				color: rgb(157, 155, 155);
+			}
+		}
+	}
+}
+
+
+
+
+
+// MEDIA QUERIES
+
+
+
+@media (min-width: 2500px) {
+	.mainContainer {
+		padding: 8rem 0rem;
+	}
+	
+	.textContainer {
+		padding-left: 8rem;
+	
+		h1 {
+			font-size: 3.8rem;
+		}
+
+		p {
+			margin-top: 3rem;
+			line-height: 140%;
+			font-size: 2.5rem;
+		}
+	}
+	
+	.iconsContainer {
+		padding-left: 7rem;
+	
+		.iconFrame {
+			width: 10%;
+			border-radius: 50%;
+	
+			img {
+				width: 100%;
+			}
+		}
+	
+		p {
+			margin-left: 6rem;
+			font-size: 2.5rem;
+		}
+	}
+	
+	.opinionsContainer {
+		margin-top: 7rem;
+	
+		.pictureOpinionContainer {
+			width: 51%;
+			margin-top: 3rem;
+	
+			.pictureContainer {
+				width: 240px;
+				height: 200px;
+			}
+	
+			.opinion {
+				margin-left: 5.5rem;
+				font-size: 2.7rem;
+	
+				&::before {
+					left: -1.5%;
+					font-size: 5rem;
+				}
 			}
 		}
 	}

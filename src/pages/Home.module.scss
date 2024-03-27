@@ -1,7 +1,6 @@
 .header {
 	width: 100%;
 	height: 120px;
-	// border: 1px solid black;
 }
 
 .mainLabel {
@@ -13,12 +12,14 @@
 	}
 }
 
-@media (max-width: 1920px) {
-	main {
-	
-		.slideshow {
-			width: 76.6%;
-			margin: auto;
-		}
+
+
+// MEDIA QUERIES
+
+
+
+@media (min-width: 2500px) {
+	.header {
+		height: 250px;
 	}
 }

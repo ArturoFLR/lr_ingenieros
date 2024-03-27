@@ -4,8 +4,10 @@ import styles from "./Header.module.scss";
 function Header() {
 	return (
 		<header className={styles.mainContainer}>
-			<img src="img/logo.jpg" alt="Logo"></img>
-			<nav>
+
+			<nav className={styles.navContainer}>
+				<img src="img/logo.jpg" alt="Logo"></img>
+
 				<ul className={styles.ulContainer}>
 					<li>
 						<Link to="/">

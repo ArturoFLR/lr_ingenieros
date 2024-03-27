@@ -53,3 +53,26 @@
 		}
 	}
 }
+
+
+
+// MEDIA QUERIES
+
+
+
+@media (min-width: 2500px) {
+	.footer {
+		padding: 2.5rem 0rem;
+	
+	
+		.logo {
+			width: 11%;
+			border: 5px solid black;
+			margin-bottom: 1rem;
+		}
+	
+		.phone_mail {
+			font-size: 3.2rem;
+		}
+	}
+}
