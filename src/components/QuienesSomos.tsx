@@ -67,7 +67,7 @@ function QuienesSomos() {
 					</div>
 
 					<p>
-						Climatización, Extracción (garajes, aseos, vestuarios, etc) y Ventilación primaria (HVAC)
+					Climatización, Ventilación Primaria y Extracción (garajes, vestuarios, zonas comunes…)
 					</p>
 				</div>
 

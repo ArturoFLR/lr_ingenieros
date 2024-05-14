@@ -158,7 +158,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/pabellones_campus_carlos_iii/pabellones-campus-carlos-iii-01.jpg"
 						]}
 						title="Reforma Integral de varios Pabellones de Uso Administrativo y Laboratorios en los Campus de Chamartín y Majadahonda"
 						employer="Instituto de Salud Carlos III"
@@ -169,7 +169,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/unhostel_imperial_madrid/unhostel-calle-Imperial-01.jpg"
 						]}
 						title="Climatización de Establecimiento “Unhostel” en c/ Imperial, Madrid"
 						employer="PROYECTA - Manzanares Arquitectos"
@@ -183,7 +183,7 @@ function Proyectos() {
 							"img/projects/edificacion_singular/polideportivo_con_piscina_vallecas/polideportivo-con-piscina-vallecas-01.png",
 							"img/projects/edificacion_singular/polideportivo_con_piscina_vallecas/polideportivo-con-piscina-vallecas-02.png"
 						]}
-						title="Polideportivo con Piscina Cubierta Cerro Cabezuelo, Puente de Vallecas, Ayto. de Madrid"
+						title="Polideportivo con Piscina Cubierta Cerro Cabezuelo, Puente de Vallecas, Madrid"
 						employer="SERYNCO Ingenieros - LKS - Ayuntamiento de Madrid"
 						handleClick ={showSlideshow}
 					/>
@@ -192,10 +192,10 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/tac_veterinario_madrid/tac-veterinario-madrid-01.jpg"
 						]}
-						title="Proyecto Centro Socio-Cultural sobre el Mercado de Abastos de Reinosa, Cantabria"
-						employer="PROYECTA - RAW"
+						title="Adaptación de salas existentes para la Instalación de un TAC en el Hospital Clínico Veterinario"
+						employer="Universidad Complutense de Madrid"
 						handleClick ={showSlideshow}
 					/>
 				</div>
@@ -203,7 +203,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/sede_repsol_mostoles_mendez_alvaro/sede-repsol-mostoles-mendez-alvaro-01.jpg"
 						]}
 						title="Proyectos Legalización de Climatización de las Sedes REPSOL Móstoles y Méndez Álvaro"
 						employer="P.A. Ingeniería"
@@ -214,7 +214,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/climatizacion_centro_comercial_valdemoro/climatizacion-centro-comercial-valdemoro-01.jpg"
 						]}
 						title="Proyecto Climatización Centro Comercial en Valdemoro"
 						employer="P.A. Ingeniería"
@@ -225,7 +225,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/local_ensayo_prado_overa/local-ensayo-prado-overa-01.jpg"
 						]}
 						title="Rehabilitación Edificio Industrial para Locales de Ensayo en el Polígono Prado Overa, Madrid"
 						employer="José Enrique Royo (Arquitecto)"
@@ -236,7 +236,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/edificacion_singular/nave_verdecora_majadahonda/nave-verdecora-majadahonda-01.jpg"
 						]}
 						title="Proyecto Climatización de varias tiendas en Madrid y Nave Comercial de Verdecora en Majadahonda"
 						employer="Ingpamer"
@@ -302,7 +302,7 @@ function Proyectos() {
 							"img/projects/viviendas_sector_privado/viviendas_ue_124_arganda_del_rey/viviendas-ue-124-arganda-01.png"
 						]}
 						title="108 Viviendas con Garaje y Piscina en UE-124 de Arganda del Rey"
-						employer="M3 Arquitectura - CAMPORROSSO"
+						employer="m3 Arquitectura - CAMPORROSSO"
 						handleClick ={showSlideshow}
 					/>
 				</div>
@@ -310,7 +310,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/viviendas_sector_privado/73_viviendas_san_sebastian_arjusa/73-viviendas-san-sebastian-arjusa-01.jpg"
 						]}
 						title="Proyecto y Dirección de Obra 73 viviendas, garajes, trasteros y urbanización con piscina en Tempranales, San Sebastián de los Reyes, Madrid"
 						employer="Intecsa-Inarsa - ARJUSA"
@@ -325,7 +325,7 @@ function Proyectos() {
 							"img/projects/viviendas_sector_privado/viviendas_alcala_torrejon/viviendas-alcala-torrejon-02.jpg"
 						]}
 						title="Más de 10 Edificios de viviendas, garajes, trasteros y urbanización con piscina en Alcalá de Henares y Torrejón de Ardoz"
-						employer="M3 Arquitectura - CAMPORROSSO"
+						employer="m3 Arquitectura - CAMPORROSSO"
 						handleClick ={showSlideshow}
 					/>
 				</div>
@@ -338,7 +338,7 @@ function Proyectos() {
 
 			
 			<h2 className={styles.h2Header} ref={header4}>
-				Viviendas Unifamilares de Lujo
+				Viviendas Unifamiliares
 			</h2>
 
 			<div className={styles.proyectCardContainer}>
@@ -350,7 +350,7 @@ function Proyectos() {
 							"img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_pozuelo/vivienda-unifamiliar-pozuelo-02.jpg",
 						]}
 						title="Viviendas Unifamiliares en Pozuelo de Alarcón, Madrid"
-						employer="M3 Arquitectura - CAMPORROSSO"
+						employer="m3 Arquitectura - CAMPORROSSO"
 						handleClick ={showSlideshow}
 					/>
 				</div>
@@ -370,10 +370,10 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/viviendas_unifamiliares_lujo/4_viviendas_campo_real/4-viviendas-campo-real-01.jpg"
 						]}
 						title="4 Viviendas Unifamiliares con urbanización con piscina en Campo Real, Madrid"
-						employer="M3 Arquitectura"
+						employer="m3 Arquitectura"
 						handleClick ={showSlideshow}
 					/>
 				</div>
@@ -381,7 +381,7 @@ function Proyectos() {
 				<div className={styles.proyectCardComponent}>
 					<ProyectCard
 						images={[
-							"img/no-image-logo.jpg"
+							"img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_toledo_espinar_velilla/viviendas-unifamiliares-toledo-espinar-velilla-01.jpg"
 						]}
 						title="Diversas Viviendas Unifamiliares en Toledo, El Espinar, Velilla de San Antonio y Villalbilla"
 						employer="ARYUARQUITECTOS"
@@ -410,6 +410,17 @@ function Proyectos() {
 						]}
 						title="Informe sobre el Estado Final de las Instalaciones del Nuevo Hospital Universitario de Toledo"
 						employer="ATC Proyecta – UTE ACCIONA-DRAGADOS-OHL"
+						handleClick ={showSlideshow}
+					/>
+				</div>
+
+				<div className={styles.proyectCardComponent}>
+					<ProyectCard
+						images={[
+							"img/projects/informes_periciales/polideportivo_faustina_valladolid/polideportivo-faustina-valladolid-01.jpg"
+						]}
+						title="Subsanación de Patologías en el Centro Deportivo Municipal Faustina Valladolid, Valdebernardo"
+						employer="Ayuntamiento de Madrid"
 						handleClick ={showSlideshow}
 					/>
 				</div>

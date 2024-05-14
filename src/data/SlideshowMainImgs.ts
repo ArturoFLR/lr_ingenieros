@@ -15,7 +15,7 @@ export const proyectsMainImgs = [
 	{
 		path: "img/projects/viviendas_unifamiliares_lujo/viviendas_unifamiliares_pozuelo/vivienda-unifamiliar-pozuelo-01.jpg",
 		caption: "Vivienda Unifamilar en Pozuelo de Alarcón, Madrid",
-		caption2: "M3 Arquitectura - CAMPORROSSO"
+		caption2: "m3 Arquitectura - CAMPORROSSO"
 	},
 	{
 		path: "img/projects/edificacion_singular/alto_horno_sestao/alto-horno-sestao-01.png",
@@ -25,7 +25,7 @@ export const proyectsMainImgs = [
 	{
 		path: "img/projects/viviendas_sector_publico/viviendas_valdelasfuentes/viviendas-valdelasfuentes-01.jpg",
 		caption: "36 Viviendas y Garaje en el Plan Parcial Valdelasfuentes, Alcobendas",
-		caption2: "Intesa-Inarsa - Empresa Municipal de la Vivienda de Alcobendas (EMVIALSA)"
+		caption2: "Intecsa-Inarsa - Empresa Municipal de la Vivienda de Alcobendas (EMVIALSA)"
 	},
 	{
 		path: "img/projects/viviendas_sector_publico/viviendas_leganes/viviendas-leganes-01.jpg",
@@ -33,18 +33,18 @@ export const proyectsMainImgs = [
 		caption2: "GYNKGO - EMSULE (Empresa Municipal del Suelo de Leganés)"
 	},
 	{
-		path: "img/projects/informes_periciales/hospital_univ_toledo/hospital-universitario-toledo-01.jpg",
-		caption: "Hospital Universitario de Toledo",
-		caption2: "ATC Proyecta - UTE ACCIONA-DRAGADOS-OHL"
+		path: "img/projects/edificacion_singular/unhostel_imperial_madrid/unhostel-calle-Imperial-01.jpg",
+		caption: "Climatización de Establecimiento “Unhostel” en c/ Imperial, Madrid",
+		caption2: "PROYECTA - Manzanares Arquitectos"
 	},
 	{
-		path: "img/projects/informes_riesgos_optimizacion/viviendas_valencia/viviendas-valencia-01.jpg",
-		caption: "152 Viviendas con urbanización, local social, gimnasio y piscina en Valencia",
-		caption2: "Zeroaplus - METROVACESA"
+		path: "img/projects/edificacion_singular/nave_verdecora_majadahonda/nave-verdecora-majadahonda-01.jpg",
+		caption: "Proyecto Climatización de varias tiendas en Madrid y Nave Comercial de Verdecora en Majadahonda",
+		caption2: "Ingpamer"
 	},
 	{
-		path: "img/projects/informes_riesgos_optimizacion/viviendas_sevilla/viviendas-sevilla-01.jpg",
-		caption: "114 viviendas, locales comerciales y garaje en Palmas Altas Sur - Sevilla",
-		caption2: "Zeroaplus - METROVACESA "
+		path: "img/projects/viviendas_sector_privado/73_viviendas_san_sebastian_arjusa/73-viviendas-san-sebastian-arjusa-01.jpg",
+		caption: "Proyecto y Dirección de Obra 73 viviendas, garajes, trasteros y urbanización con piscina en Tempranales, San Sebastián de los Reyes, Madrid",
+		caption2: "Intecsa-Inarsa - ARJUSA"
 	}
 ];
