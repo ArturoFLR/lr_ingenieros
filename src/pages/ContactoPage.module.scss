@@ -1,7 +1,7 @@
 .header {
 	width: 100%;
-	height: 97px;
-	// border: 1px solid black;
+	height: 120px;
+	border-bottom: 1px solid black;
 }
 
 main {
@@ -9,5 +9,15 @@ main {
 
 	.contacto {
 		width: 100%;
+	}
+}
+
+
+
+// MEDIA QUERIES
+
+@media (min-width: 2200px) {
+	.header {
+		height: 230px;
 	}
 }

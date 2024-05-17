@@ -21,37 +21,37 @@ function Proyectos() {
 
 	const imgObserver1 = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			(header1.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+			(header1.current! as HTMLHeadingElement).classList.add(styles.animatedH3Header);
 		}
 	}, { root: null, threshold: 0 });
 
 	const imgObserver2 = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			(header2.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+			(header2.current! as HTMLHeadingElement).classList.add(styles.animatedH3Header);
 		}
 	}, { root: null, threshold: 0 });
 
 	const imgObserver3 = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			(header3.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+			(header3.current! as HTMLHeadingElement).classList.add(styles.animatedH3Header);
 		}
 	}, { root: null, threshold: 0 });
 
 	const imgObserver4 = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			(header4.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+			(header4.current! as HTMLHeadingElement).classList.add(styles.animatedH3Header);
 		}
 	}, { root: null, threshold: 0 });
 
 	const imgObserver5 = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			(header5.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+			(header5.current! as HTMLHeadingElement).classList.add(styles.animatedH3Header);
 		}
 	}, { root: null, threshold: 0 });
 
 	const imgObserver6 = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
-			(header6.current! as HTMLHeadingElement).classList.add(styles.animatedH2Header);
+			(header6.current! as HTMLHeadingElement).classList.add(styles.animatedH3Header);
 		}
 	}, { root: null, threshold: 0 });
 
@@ -98,10 +98,11 @@ function Proyectos() {
 				Proyectos
 			</h1>
 
+			<h2 className={styles.h2Header}>Algunos ejemplos representativos de nuestro trabajo</h2>
 
-			<h2 className={styles.h2Header} ref={header1}>
+			<h3 className={`${styles.h3Header} ${styles.h3HeaderFirst}`} ref={header1}>
 				Edificación Singular
-			</h2>
+			</h3>
 
 			<div className={styles.proyectCardContainer}>
 
@@ -251,9 +252,9 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header} ref={header2}>
+			<h3 className={styles.h3Header} ref={header2}>
 				Viviendas Sector Público
-			</h2>
+			</h3>
 
 			<div className={styles.proyectCardContainer}>
 
@@ -290,9 +291,9 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header} ref={header3}>
+			<h3 className={styles.h3Header} ref={header3}>
 				Viviendas Sector Privado
-			</h2>
+			</h3>
 
 			<div className={styles.proyectCardContainer}>
 
@@ -337,9 +338,9 @@ function Proyectos() {
 
 
 			
-			<h2 className={styles.h2Header} ref={header4}>
+			<h3 className={styles.h3Header} ref={header4}>
 				Viviendas Unifamiliares
-			</h2>
+			</h3>
 
 			<div className={styles.proyectCardContainer}>
 
@@ -397,9 +398,9 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header} ref={header5}>
+			<h3 className={styles.h3Header} ref={header5}>
 				Informes Periciales
-			</h2>
+			</h3>
 
 			<div className={styles.proyectCardContainer}>
 
@@ -432,9 +433,9 @@ function Proyectos() {
 
 
 
-			<h2 className={styles.h2Header} ref={header6}>
+			<h3 className={styles.h3Header} ref={header6}>
 				Informes Técnicos sobre Riesgos y Optimización de Proyectos
-			</h2>
+			</h3>
 
 			<div className={styles.proyectCardContainer}>
 

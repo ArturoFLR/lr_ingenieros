@@ -27,7 +27,7 @@
 	align-items: center;
 	width: 65%;
 	margin: auto;
-	height: calc(100vh - 97px);
+	height: calc(100vh - 230px);
 	background-color: white;
 	background-image: url("@/backgrounds/graph_paper1.jpg");
 	background-repeat: repeat-x;
@@ -118,5 +118,111 @@
 
 	.lineSuperInferAnimation {
 		animation: horizLineMoving 1.5s forwards;
+	}
+}
+
+
+
+
+
+
+// MEDIA QUERIES
+
+@media (min-width: 2200px) {
+	.mainContainer {
+		height: calc(100vh - 230px);
+	}
+	
+	.frame {
+		width: 800px;
+		height: 418px;
+		padding: 3rem 3rem;
+	
+		.header {
+			font-size: 4rem;
+			margin-bottom: 2.5rem;
+		}
+	
+		.subHeader {
+			font-size: 2.5rem;
+		}
+	
+		.mailParagraph {
+			font-size: 2.5rem;
+			margin-top: 4rem;
+		}
+	
+		.lineLatLeft, .lineLatRight {
+			top: -65px;
+			height: 550px;
+			width: 20px;
+		}
+	
+		.lineLatLeft {
+			left: -10px;
+		}
+	
+		.lineLatRight {
+			right: -10px;
+		}
+	
+		.lineSuper, .lineInfer {
+			width: 950px;
+			height: 20px;
+			left: -80px;
+		}
+	
+		.lineSuper {
+			top: -10px;
+		}
+	
+		.lineInfer {
+			bottom: -7px;
+		}
+	}
+}
+
+
+
+
+
+
+@media (min-width: 3000px) {
+	.mainContainer {
+		height: calc(100vh - 250px);
+	}
+	
+	.frame {
+		width: 1400px;
+		height: 731px;
+		padding: 5rem 5rem;
+	
+		.header {
+			font-size: 6.5rem;
+			margin-bottom: 5rem;
+		}
+	
+		.subHeader {
+			font-size: 4rem;
+		}
+	
+		.mailParagraph {
+			font-size: 4rem;
+			margin-top: 8rem;
+		}
+	
+		.lineLatLeft, .lineLatRight {
+			height: 880px;
+			width: 25px;
+		}
+	
+		.lineSuper, .lineInfer {
+			width: 1580px;
+			height: 25px;
+		}
+	
+		.lineSuper {
+			top: -13px;
+		}
 	}
 }

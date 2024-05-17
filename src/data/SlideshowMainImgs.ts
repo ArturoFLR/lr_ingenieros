@@ -44,7 +44,7 @@ export const proyectsMainImgs = [
 	},
 	{
 		path: "img/projects/viviendas_sector_privado/73_viviendas_san_sebastian_arjusa/73-viviendas-san-sebastian-arjusa-01.jpg",
-		caption: "Proyecto y Dirección de Obra 73 viviendas, garajes, trasteros y urbanización con piscina en Tempranales, San Sebastián de los Reyes, Madrid",
+		caption: "73 viviendas, garajes, trasteros y urbanización con piscina en Tempranales, San Sebastián de los Reyes, Madrid",
 		caption2: "Intecsa-Inarsa - ARJUSA"
 	}
 ];

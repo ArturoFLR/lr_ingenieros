@@ -55,3 +55,52 @@
 		}
 	}
 }
+
+
+
+
+
+// MEDIA QUERIES
+
+@media (min-width: 2200px) {
+	.mainContainer {
+		box-shadow: 6px 3px 10px rgba(120, 120, 120, 0.75);
+	
+		.proyectInfoContainer{
+	
+			.title {
+				line-height: 120%;
+				font-size: 1.9rem;
+				font-weight: 600;
+			}
+	
+			.employer {
+				margin-top: 0.5rem;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+
+
+
+@media (min-width: 3000px) {
+	.mainContainer {
+		box-shadow: 7px 4px 15px rgba(120, 120, 120, 0.75);
+	
+		.proyectInfoContainer{
+	
+			.title {
+				line-height: 120%;
+				font-size: 2.8rem;
+				font-weight: 600;
+			}
+	
+			.employer {
+				margin-top: 1rem;
+				font-size: 2rem;
+			}
+		}
+	}
+}

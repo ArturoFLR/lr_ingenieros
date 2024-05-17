@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
+	const url = useLocation();
+	console.log(url.pathname);
+
 	return (
 		<header className={styles.mainContainer}>
 
@@ -11,7 +14,9 @@ function Header() {
 				<ul className={styles.ulContainer}>
 					<li>
 						<Link to="/">
-							<button type="button">Inicio</button>
+							<button type="button" className={url.pathname === "/" ? styles.selectedRoute : ""}>
+								Inicio
+							</button>
 						</Link>
 					</li>
 
@@ -19,7 +24,9 @@ function Header() {
 
 					<li>
 						<Link to="/quienes_somos">
-							<button type="button">Quiénes Somos</button>
+							<button type="button" className={url.pathname === "/quienes_somos" ? styles.selectedRoute : ""} >
+								Quiénes Somos
+							</button>
 						</Link>
 					</li>
 
@@ -27,7 +34,9 @@ function Header() {
 
 					<li>
 						<Link to="/proyectos">
-							<button type="button">Proyectos</button>
+							<button type="button" className={url.pathname === "/proyectos" ? styles.selectedRoute : ""} >
+								Proyectos
+							</button>
 						</Link>
 					</li>
 
@@ -35,7 +44,9 @@ function Header() {
 
 					<li>
 						<Link to="/contacto">
-							<button type="button">Contacto</button>
+							<button type="button" className={url.pathname === "/contacto" ? styles.selectedRoute : ""} >
+								Contacto
+							</button>
 						</Link>
 					</li>
 				</ul>

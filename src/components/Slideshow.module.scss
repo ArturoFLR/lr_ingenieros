@@ -40,7 +40,7 @@
 		opacity: 0%;
 	}
 	to {
-		top: 12.5%;
+		top: 13.5%;
 		opacity: 100%;
 	}
 }
@@ -92,7 +92,7 @@
 .caption, .caption2, .proyectLink {
 	position: absolute;
 	top: 4%;
-	right: 7%;
+	right: 5%;
 	text-align: right;
 	font-size: 1.9rem;
 	font-weight: 500;
@@ -105,7 +105,7 @@
 }
 
 .caption2 {
-	top: 12.5%;
+	top: 13.5%;
 	font-size: 1.5rem
 }
 
@@ -250,11 +250,45 @@
 
 
 
-@media (min-width: 2500px) {
+@media (min-width: 2200px) {
+
+// Anima el nombre del empleador en la imagen principal
+
+@keyframes caption2Arise {
+	from {
+		top: 38%;
+		opacity: 0%;
+	}
+	to {
+		top: 15.5%;
+		opacity: 100%;
+	}
+}
+
+// Anima el enlace al proyecto mostrado en la imagen principal
+@keyframes proyectLinkArise {
+	from {
+		top: 45%;
+		opacity: 0%;
+	}
+	to {
+		top: 21.5%;
+		opacity: 100%;
+	}
+}
+
 	.mainContainer {
 		height: calc(100vh - 250px);					// 250px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
 		border: 5px solid white;
 		border-radius: 37px;
+
+		.darkener {
+			position: absolute;
+			width: 100%;
+			height: 45%;
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0));
+			z-index: 1;
+		}
 	}
 	
 	.caption, .caption2, .proyectLink {
@@ -263,10 +297,12 @@
 	}
 	
 	.caption2 {
+		top: 15.5%;
 		font-size: 2.8rem
 	}
 	
 	.proyectLink {
+		top: 21.5%;
 		border: 5px solid white;
 		padding: 2rem;
 		font-size: 3rem;
