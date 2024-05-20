@@ -149,7 +149,7 @@
 
 
 
-// MEDIA QUERIES
+///////////////////////////////////////////////////////////////////////////////////////// MEDIA QUERIES
 
 @media (min-width: 2200px) {
 	.imageContainer {
@@ -257,6 +257,118 @@
 		.employer {
 			font-size: 2.4rem;
 			margin-top: 1.4rem;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 1100px) or (height < 700px) {
+	
+	.imageContainer {
+		width: 700px;
+		height: 437px;
+
+	}
+	
+	.filter {
+		width: 700px;
+		height: 437px;
+	
+		.mainImg, .prevImg, .nextImg {
+			width: 700px;
+	
+			img {
+				width: 700px;
+			}
+		}
+	
+		.buttonPrev, .buttonNext {
+			top: 45%;
+			padding: 1.5rem;
+			font-size: 35px;
+		}
+	}
+	
+	.closeIcon {
+		top: -4%;
+		right: -3%;
+		width: 55px;
+		height: 55px;
+		font-size: 30px;
+	}
+	
+	.cardboardContainer {
+		width: 680px;
+		height: 100px;
+		margin-top: 0.5rem;
+		padding: 0.5rem 3.7rem 1rem 1.2rem;
+	
+		.title {
+			font-size: 1.1rem;
+		}
+	
+		.employer {
+			font-size: 0.9rem;
+			margin-top: 0.5rem;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 750px) {
+	
+	.imageContainer {
+		width: 91vw;
+		height: 65vw;
+
+	}
+	
+	.filter {
+		width: 91vw;
+		height: 65vw;
+	
+		.mainImg, .prevImg, .nextImg {
+			width: 91vw;
+	
+			img {
+				width: 91vw;
+			}
+		}
+	
+		.buttonPrev, .buttonNext {
+			top: 45%;
+			padding: 1.5rem;
+			font-size: 35px;
+		}
+	}
+	
+	.closeIcon {
+		top: -6%;
+		right: -3%;
+		width: 40px;
+		height: 40px;
+		font-size: 23px;
+	}
+	
+	.cardboardContainer {
+		width: 91vw;
+		height: 120px;
+		margin-top: 0.5rem;
+		padding: 0.5rem 3.7rem 1rem 1.2rem;
+	
+		.title {
+			font-size: 0.9rem;
+		}
+	
+		.employer {
+			font-size: 0.8rem;
+			margin-top: 0.5rem;
 		}
 	}
 }

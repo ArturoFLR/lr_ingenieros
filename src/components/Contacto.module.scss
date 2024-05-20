@@ -126,7 +126,7 @@
 
 
 
-// MEDIA QUERIES
+///////////////////////////////////////////////////////////////////////////////////////////////// MEDIA QUERIES
 
 @media (min-width: 2200px) {
 	.mainContainer {
@@ -223,6 +223,107 @@
 	
 		.lineSuper {
 			top: -13px;
+		}
+	}
+}
+
+
+
+
+
+
+@media (orientation: portrait) {
+	.mainContainer {
+		align-items: flex-start;
+		height: 80vh;
+	}
+	
+	.frame {
+		margin-top: 12vh;
+	}
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+	.mainContainer {
+		width: 100%;
+	}
+}
+
+
+
+
+@media (max-width: 500px) {
+	.mainContainer {
+		width: 100%;
+	}
+
+	.frame {
+		width: 270px;
+		height: 220px;
+		padding: 1.5rem 2rem;
+	
+		.header {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+	
+		.subHeader {
+			font-size: 1.2rem;
+		}
+	
+		.mailParagraph {
+			font-size: 1.3rem;
+			margin-top: 1.5rem;
+		}
+	
+		.lineLatLeft, .lineLatRight {
+			height: 325px;
+		}
+	
+		.lineSuper, .lineInfer {
+			width: 420px;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 350px) {
+	.mainContainer {
+		width: 100%;
+	}
+
+	.frame {
+		width: 260px;
+		height: 215px;
+		padding: 1.5rem 2rem;
+	
+		.header {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+	
+		.subHeader {
+			font-size: 1.2rem;
+		}
+	
+		.mailParagraph {
+			font-size: 1.3rem;
+			margin-top: 1.5rem;
+		}
+	
+		.lineLatLeft, .lineLatRight {
+			height: 325px;
+		}
+	
+		.lineSuper, .lineInfer {
+			width: 450px;
 		}
 	}
 }

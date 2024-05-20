@@ -63,7 +63,7 @@
 		}
 	}
 
-	.block1ImgContainer, .block2ImgContainer {
+	.block1ImgContainer, .block2ImgContainer, .block1ImgContainerMobile, .block2ImgContainerMobile {
 		width: 300px;
 		height: 300px;
 		margin: 0rem auto;
@@ -75,15 +75,19 @@
 		background-repeat: no-repeat;
 	}
 
-	.block1ImgContainer {
+	.block1ImgContainer, .block1ImgContainerMobile {
 		animation: fadeIn 3.5s forwards;
 		margin-left: 2rem;
 	}
 
-	.block2ImgContainer {
+	.block2ImgContainer, .block2ImgContainerMobile {
 		opacity: 0%;
 		margin-right: 2rem;
 		background-image: url("@/img/projects/edificacion_singular/junta_puente_vallecas/junta-municipal-puente-de-vallecas-01.png");
+	}
+
+	.block1ImgContainerMobile, .block2ImgContainerMobile {
+		display: none;
 	}
 
 	.imgAnimation {
@@ -134,13 +138,13 @@
 	margin: 2rem 0rem;
 	color: $Text_Paragraph;
 	line-height: 140%;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 }
 
 
 
 
-// MEDIA QUERIES
+////////////////////////////////////////////////////////////////////////////////////////////////////////// MEDIA QUERIES
 
 @media (min-width: 2200px) {
 	.mainContainer {
@@ -243,5 +247,121 @@
 	
 	.paragraph {
 		font-size: 2.7rem;
+	}
+}
+
+
+
+
+
+
+@media (max-width: 850px) {
+	.mainContainer {
+		padding: 3rem 2rem 5rem 2rem;
+	}
+	
+	.h1Header {
+		margin-bottom: 2rem;
+	}
+	
+	.block1, .block2 {
+
+	
+		.block1Text, .block2Text {
+			display: block;
+			width: 100%;
+		}
+	
+		.block1ImgContainer, .block2ImgContainer {
+			display: none;
+		}
+
+		.block1ImgContainerMobile, .block2ImgContainerMobile {
+			display: block;
+		}
+
+		.block1ImgContainerMobile {
+			float: right;
+			width: 250px;
+			height: 250px;
+			border: 16px solid rgb(234, 233, 233);
+		}
+
+		.block2ImgContainerMobile {
+			float: left;
+			width: 150px;
+			height: 150px;
+			border: 10px solid rgb(234, 233, 233);
+		}
+	}
+	
+	.bulletsContainer {
+		border-top: 4px solid $Text_Important;
+		border-bottom: 4px solid $Text_Important;
+	}
+}
+
+
+
+
+
+@media (max-width: 700px) {
+	.mainContainer {
+		padding: 2rem 2rem 2.5rem 2rem;
+	}
+	
+	.h1Header {
+		margin-bottom: 2.5rem;
+		font-size: 1.8rem;
+	}
+	
+	.block1, .block2 {
+	
+		.block1ImgContainerMobile {
+			float: right;
+			width: 100px;
+			height: 100px;
+			border: 10px solid rgb(234, 233, 233);
+		}
+
+		.block2ImgContainerMobile {
+			float: left;
+			width: 100px;
+			height: 100px;
+			border: 10px solid rgb(234, 233, 233);
+		}
+	}
+	
+	.bulletsContainer {
+		width: 111%;
+		margin: auto;
+		margin: 1.5rem 0rem 1.5rem 0rem;
+		padding: 2rem 0.8rem 2rem 1rem;
+		box-shadow: 2px 3px 10px rgba(120, 120, 120, 0.75);
+	
+		.bullet {
+			margin-top: 1.4rem;
+	
+			.iconFrame {
+				padding: 0.45rem;
+	
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+	
+	
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+	
+	.paragraph {
+		margin: 2rem 0rem;
+		color: $Text_Paragraph;
+		line-height: 140%;
+		font-size: 1.3rem;
 	}
 }

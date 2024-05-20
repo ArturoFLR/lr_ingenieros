@@ -3,15 +3,18 @@ import styles from "./QuienesSomos.module.scss";
 
 function QuienesSomos() {
 	const img = useRef(null);
+	const imgMobile = useRef(null);
 
 	const imgObserver = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting) {
 			(img.current! as HTMLImageElement).classList.add(styles.imgAnimation);
+			(imgMobile.current! as HTMLImageElement).classList.add(styles.imgAnimation);
 		}
 	}, { root: null, threshold: 0.5 });
 
 	useEffect(() => {
 		imgObserver.observe(img.current! as HTMLImageElement);
+		imgObserver.observe(imgMobile.current! as HTMLImageElement);
 	});
 
 	return (
@@ -23,6 +26,9 @@ function QuienesSomos() {
 
 			<div className={styles.block1}>
 				<div className={styles.block1Text}>
+
+					<div className={styles.block1ImgContainerMobile}></div>
+
 					<p className={`${styles.paragraph} ${styles.p1}`}>
 						Somos un equipo de <span>profesionales freelance</span>, dedicados al desarrollo de proyectos y estudios en el ámbito de las instalaciones en Edificación desde hace <span>más de 20 años</span>.
 					</p>
@@ -119,6 +125,8 @@ function QuienesSomos() {
 					<p className={`${styles.paragraph} ${styles.p4}`}>
 						Nuestro trabajo comienza <span>acompañando al cliente</span> en fase de Anteproyecto, analizando las necesidades propias de cada Proyecto y aportando las mejores soluciones en cuestión de optimización de espacios, cumplimiento de normativa vigente, eficiencia energética y coste de las instalaciones, así como facilidad de mantenimiento de las mismas, proporcionando un <span>producto final de fácil implantación en obra</span> y minimizando la toma de decisiones en fase de construcción.
 					</p>
+
+					<div className={styles.block2ImgContainerMobile} ref={imgMobile} ></div>
 
 					<p className={`${styles.paragraph} ${styles.p5}`}>
 						En fase de diseño y cálculo de las instalaciones, trabajamos con las herramientas más actualizadas, <span>adaptándonos</span> a las necesidades y metodología de trabajo del cliente.
