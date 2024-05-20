@@ -1,9 +1,23 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useRef } from "react";
+
 
 function Header() {
+	const ulElement = useRef<HTMLUListElement>(null);
 	const url = useLocation();
-	console.log(url.pathname);
+
+
+	function changeMobileNavVisibility () {
+		if (ulElement.current?.classList.contains(styles.mobileNavOpen)) {
+			ulElement.current.classList.remove(styles.mobileNavOpen);
+			ulElement.current.classList.add(styles.mobileNavClose);
+		} else {
+			ulElement.current?.classList.remove(styles.mobileNavClose);
+			ulElement.current?.classList.add(styles.mobileNavOpen);
+		}
+	}
 
 	return (
 		<header className={styles.mainContainer}>
@@ -11,7 +25,11 @@ function Header() {
 			<nav className={styles.navContainer}>
 				<img src="img/logo.jpg" alt="Logo"></img>
 
-				<ul className={styles.ulContainer}>
+				<div onClick={changeMobileNavVisibility} className={styles.mobileMenu}>
+					<MenuIcon fontSize="inherit" color="inherit"/>
+				</div>
+
+				<ul ref={ulElement} className={styles.ulContainer}>
 					<li>
 						<Link to="/">
 							<button type="button" className={url.pathname === "/" ? styles.selectedRoute : ""}>

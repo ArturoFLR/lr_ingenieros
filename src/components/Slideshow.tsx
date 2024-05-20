@@ -134,7 +134,7 @@ function Slideshow({ images }: SlideshowProps) {
 		return images.map((element, i) => {
 			return (
 				<div className={`${styles.thumbnail} ${i === 0 ? styles.thumbnailSelected : ""}`} key={i} id={String(i)}>
-					<img src={element.path} alt="" id={String(i)} onClick={(event) => changeMainImg(event, "thumbnail")}></img>
+					<img src={element.path[0]} alt="" id={String(i)} onClick={(event) => changeMainImg(event, "thumbnail")}></img>
 				</div>
 			);
 		});
@@ -155,8 +155,12 @@ function Slideshow({ images }: SlideshowProps) {
 			<div className={styles.darkener}></div>
 			<p className={`${styles.caption} ${styles.captionAnimation}`} ref={caption1}>{mainImg.caption}</p>
 			<p className={`${styles.caption2} ${styles.caption2Animation}`} ref={caption2}>{mainImg.caption2}</p>
-			<Link to="/proyectos" className={`${styles.proyectLink} ${styles.proyectLinkArise}`} ref={proyectLink}>Ver Proyecto</Link>
-			<img className={`${styles.selectedImg} ${styles.selectedImgZoomIn}`} src={mainImg.path} alt="" ref={selectedImage}></img>
+			<Link to="/proyectos" ref={proyectLink} state={{imageUrl: mainImg.path, caption1: mainImg.caption, caption2: mainImg.caption2 }}
+				className={`${styles.proyectLink} ${styles.proyectLinkArise}`}
+			>
+				Ver Proyecto
+			</Link>
+			<img className={`${styles.selectedImg} ${styles.selectedImgZoomIn}`} src={mainImg.path[0]} alt="" ref={selectedImage}></img>
 			<button className={styles.buttonPrev} type="button" onClick={(event) => changeMainImg(event, "prev")}>&lt;</button>
 			<button className={styles.buttonNext} type="button" onClick={(event) => changeMainImg(event, "next")}>&gt;</button>
 			<div className={styles.thumbnailContainer}>

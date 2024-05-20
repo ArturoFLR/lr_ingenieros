@@ -2,11 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import ProyectCard from "./ProyectCard";
 import styles from "./Proyectos.module.scss";
 import SlideshowMini from "./SlideshowMini";
+import { useLocation } from "react-router-dom";
 
 type SlideShowStateType = "show" | "hide";
 
 function Proyectos() {
 	const [slideShowState, setSlideShowState] = useState<SlideShowStateType>("hide");
+	const proyectSentInfo = useLocation();
+	const showSentProyectInfo = useRef(true);
 
 	const slideshowImages = useRef<string[]>([]);
 	const slideshowTitle = useRef<string>("");
@@ -81,6 +84,11 @@ function Proyectos() {
 		imgObserver6.observe(header6.current! as HTMLHeadingElement);
 	});
 
+	useEffect( () => {
+		if (proyectSentInfo.state && showSentProyectInfo.current) {
+			showSlideshow(proyectSentInfo.state.imageUrl, proyectSentInfo.state.caption1, proyectSentInfo.state.caption2);
+		}
+	}, []);
 
 	return (
 		<div className={styles.mainContainer}>

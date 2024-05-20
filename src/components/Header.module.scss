@@ -23,6 +23,12 @@
 		z-index: 1;
 	}
 	
+	.mobileMenu {
+		display: none;
+		font-size: 50px;
+		color: $Black;
+	}
+
 	.ulContainer {
 		display: flex;
 		justify-content: center;
@@ -77,7 +83,7 @@
 
 
 @media (min-width: 2500px) {
-	
+
 	.navContainer {
 	
 		img {
@@ -120,6 +126,170 @@
 			li {
 				margin: 0rem 6rem;
 			}
+		}
+	}
+}
+
+
+
+
+@media (max-width: 1180px) {
+	
+	.navContainer {
+	
+		.ulContainer {
+			padding: 0.5rem;
+			padding-left: 13rem;
+			
+			li {
+				margin: 0rem 1.1rem;
+			}
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 900px) {
+	
+	@keyframes showMobileMenu {
+		0% {right: -100%;}
+		100% {right: 0px;}
+	}
+
+	@keyframes hideMobileMenu {
+		0% {right: 0px;}
+		100% {right: -100%;}
+	}
+
+	.navContainer {
+		position: static;
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			top: 6px;
+			left: 5vw;
+			width: 140px;
+			margin-left: 0rem;
+			border: 3px solid black;
+			z-index: 1;
+		}
+		
+		.mobileMenu {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 3px solid $White;
+			border-radius: 10px;
+			margin-right: 5vw;
+			font-size: 50px;
+			color: $White;
+			cursor: pointer;
+			box-shadow: 4px 2px 8px rgba(16, 15, 15, 0.75);
+		}
+		
+		.ulContainer {
+			position: fixed;
+			top: 80px;
+			right: -100%;
+			z-index: 3;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			width: 45%;
+			padding: 3.5rem 2rem;
+			background-color: $White;
+			border: 3px solid $Black;
+			border-right: 0px;
+			border-radius: 20px 0px 0px 20px;
+			box-shadow: 4px 2px 18px rgba(16, 15, 15, 0.75);
+			
+			li {
+				margin: 1.2rem 0rem;
+		
+				button {
+					font-size: 2rem;
+		
+					&:hover {
+						scale: 1.25;
+					}
+				}
+				
+				.selectedRoute {
+					scale: 1.25;
+				}
+			}
+
+			span {
+				display: none;
+			}
+		}
+
+		.mobileNavOpen {
+			animation: showMobileMenu 1s forwards;
+		}
+
+		.mobileNavClose {
+			animation: hideMobileMenu 1s forwards;
+		}
+	}
+}
+
+
+
+
+@media (max-width: 650px) {
+	.navContainer {
+
+		img {
+			top: 3px;
+			left: 5vw;
+			width: 130px;
+			margin-left: 0rem;
+			border: 3px solid black;
+			z-index: 1;
+		}
+		
+		.mobileMenu {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 3px solid $White;
+			border-radius: 10px;
+			margin-right: 5vw;
+			font-size: 50px;
+			color: $White;
+			cursor: pointer;
+			box-shadow: 4px 2px 8px rgba(16, 15, 15, 0.75);
+		}
+		
+		.ulContainer {
+			top: 70px;
+			width: 75%;
+			padding: 3rem 2rem;
+			
+			li {
+				margin: 1.2rem 0rem;
+		
+				button {
+					font-size: 1.9rem;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 380px) {
+	.navContainer {
+		
+		.ulContainer {
+			top: 70px;
+			width: 85%;
+			padding: 1.5rem 1.5rem;
 		}
 	}
 }

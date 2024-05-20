@@ -246,7 +246,8 @@
 
 
 
-// MEDIA QUERIES
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////// MEDIA QUERIES
 
 
 
@@ -334,5 +335,15 @@
 				border: 4px solid rgba(255, 255, 255, 0.934);
 			}
 		}
+	}
+}
+
+
+
+
+
+@media (orientation: portrait) {
+	.mainContainer {
+		height: calc(100vw - 25vw);					
 	}
 }

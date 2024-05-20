@@ -19,3 +19,18 @@
 		height: 230px;
 	}
 }
+
+
+
+@media (max-width: 900px) {
+	.header {
+		height: 80px;
+	}
+}
+
+
+@media (max-width: 650px) {
+	.header {
+		height: 70px;
+	}
+}
