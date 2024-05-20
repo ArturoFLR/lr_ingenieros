@@ -70,7 +70,7 @@ function Presentation() {
 					</p>
 				</div>
 
-				<div className={styles.pictureOpinionContainer}>
+				<div className={`${styles.pictureOpinionContainer} ${styles.pictureOpinionContainer2}`}>
 					<div className={styles.pictureContainer}>
 						<img src="img/zeroaplus-logo.jpg" className={styles.picture} alt="Zeroaplus Consultoria e Ingenieria"></img>
 					</div>
@@ -79,7 +79,7 @@ function Presentation() {
 					</p>
 				</div>
 
-				<div className={styles.pictureOpinionContainer}>
+				<div className={`${styles.pictureOpinionContainer} ${styles.pictureOpinionContainer3}`}>
 					<div className={styles.pictureContainer}>
 						<img src="img/proyecta-logo.jpg" className={styles.picture} alt="Proyecta! Servicios de Ingeniería"></img>
 					</div>

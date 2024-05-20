@@ -162,10 +162,10 @@
 
 .buttonPrev, .buttonNext {
 	position: absolute;
-	top: 47%;
-	padding: 1rem;
+	top: 40%;
+	padding: 1.5rem;
 	color: white;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 500;
 	background-color: rgba(0, 0, 0, 0.103);
 	border: 0px solid rgba(255, 255, 255, 0.455);
@@ -177,7 +177,7 @@
 		cursor: pointer;
 		background-color: rgba(0, 0, 0, 0.349);
 		border: 2px solid rgba(255, 255, 255, 0.796);
-		padding: 1.2rem;
+		padding: 2rem;
 	}
 
 	&:active {
@@ -344,6 +344,226 @@
 
 @media (orientation: portrait) {
 	.mainContainer {
-		height: calc(100vw - 25vw);					
+		height: calc(100vw - 25vw);
+		border-radius: 0%;					
+	}
+}
+
+
+
+
+
+@media (max-height: 900px) or (max-width: 1020px) {
+
+	// Anima los textos de la imagen principal
+	@keyframes caption2Arise {
+		from {
+			top: 38%;
+			opacity: 0%;
+		}
+		to {
+			top: 14%;
+			opacity: 100%;
+		}
+	}
+
+	// Anima el enlace al proyecto mostrado en la imagen principal
+	@keyframes proyectLinkArise {
+		from {
+			top: 45%;
+			opacity: 0%;
+		}
+		to {
+			top: 22%;
+			opacity: 100%;
+		}
+	}
+
+	.mainContainer {
+
+		.darkener {
+			position: absolute;
+			width: 100%;
+			height: 45%;
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0));
+			z-index: 1;
+		}
+	}
+	
+	.caption, .caption2, .proyectLink {
+		font-size: 1.5rem;
+	}
+	
+	.caption2 {
+		font-size: 1.2rem;
+		top: 14%;
+	}
+	
+	.proyectLink {
+		font-size: 1.3rem;
+		top: 22%;
+	}
+	
+	.buttonPrev, .buttonNext {
+	
+		&:hover {
+			border: 2px solid rgba(255, 255, 255, 0.796);
+			padding: 2.5rem;
+		}
+	
+		&:active {
+			padding: 2rem;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 710px) {
+
+	// Anima los textos de la imagen principal
+	@keyframes caption2Arise {
+		from {
+			top: 38%;
+			opacity: 0%;
+		}
+		to {
+			top: 18.5%;
+			opacity: 100%;
+		}
+	}
+
+	// Anima el enlace al proyecto mostrado en la imagen principal
+	@keyframes proyectLinkArise {
+		from {
+			top: 45%;
+			opacity: 0%;
+		}
+		to {
+			top: 28%;
+			opacity: 100%;
+		}
+	}
+	
+	.mainContainer {
+
+		.darkener {
+			height: 70%;
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0));
+		}
+	}
+
+	.caption, .caption2, .proyectLink {
+		font-size: 0.9rem;
+	}
+	
+	.caption2 {
+		font-size: 0.75rem;
+		top: 18.5%;
+	}
+	
+	.proyectLink {
+		font-size: 1rem;
+		top: 28%;
+	}
+	
+	.buttonPrev, .buttonNext {
+		top: 48%;
+		padding: 1rem;
+		font-size: 2.5rem;
+
+		&:hover {
+			padding: 1.5rem;
+		}
+	
+		&:active {
+			padding: 1rem;
+		}
+	}
+	
+	.thumbnailContainer {
+		height: 16%;
+		border: 3px solid rgba(0, 0, 0, 0.53);
+	
+		.thumbnailSelected {
+	
+			img {
+				border: 2px solid rgba(255, 255, 255, 0.934);
+			}
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 389px) {
+
+	// Anima los textos de la imagen principal
+	@keyframes caption2Arise {
+		from {
+			top: 38%;
+			opacity: 0%;
+		}
+		to {
+			top: 21.5%;
+			opacity: 100%;
+		}
+	}
+
+	// Anima el enlace al proyecto mostrado en la imagen principal
+	@keyframes proyectLinkArise {
+		from {
+			top: 45%;
+			opacity: 0%;
+		}
+		to {
+			top: 32%;
+			opacity: 100%;
+		}
+	}
+
+	.caption, .caption2, .proyectLink {
+		font-size: 0.8rem;
+	}
+	
+	.caption2 {
+		top: 21.5%;
+		font-size: 0.7rem;
+	}
+	
+	.proyectLink {
+		top: 32%;
+		padding: 0.5rem;
+		font-size: 0.9rem;
+	}
+	
+	.buttonPrev, .buttonNext {
+		top: 50%;
+		padding: 0.6rem;
+		font-size: 2rem;
+
+		&:hover {
+			padding: 1rem;
+		}
+	
+		&:active {
+			padding: 0.7rem;
+		}
+	}
+	
+	.thumbnailContainer {
+		height: 16%;
+		border: 3px solid rgba(0, 0, 0, 0.53);
+	
+		.thumbnailSelected {
+	
+			img {
+				border: 2px solid rgba(255, 255, 255, 0.934);
+			}
+		}
 	}
 }

@@ -56,7 +56,7 @@
 
 
 
-// MEDIA QUERIES
+//////////////////////////////////////////////////////////////////////////////////////////////////////// MEDIA QUERIES
 
 
 
@@ -73,6 +73,82 @@
 	
 		.phone_mail {
 			font-size: 3.2rem;
+		}
+	}
+}
+
+
+
+
+@media (max-width: 1400px) {
+	.footer {
+		padding: 1.5rem 0rem;
+	
+	
+		.logo {
+			width: 14%;
+			border: 2px solid black;
+			margin-bottom: 1rem;
+		}
+	
+		.phone_mail {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 1025px) {
+	.footer {
+		padding: 1.5rem 0rem;
+	
+	
+		.logo {
+			width: 18%;
+			border: 2px solid black;
+		}
+	
+		.phone_mail {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+
+@media (max-width: 800px) {
+	.footer {
+		padding: 1rem 0rem;
+	
+	
+		.logo {
+			width: 22%;
+			margin-bottom: 0.8rem;
+		}
+	
+		.phone_mail {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+
+
+
+@media (max-width: 500px) {
+	.footer {
+		padding: 1rem 0rem;
+	
+	
+		.logo {
+			width: 33%;
+			margin-bottom: 0.6rem;
+		}
+	
+		.phone_mail {
+			font-size: 1.1rem;
 		}
 	}
 }
