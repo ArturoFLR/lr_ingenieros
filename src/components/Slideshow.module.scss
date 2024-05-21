@@ -344,7 +344,7 @@
 
 @media (orientation: portrait) {
 	.mainContainer {
-		height: calc(100vw - 25vw);
+		height: calc(100vw - 20vw);
 		border-radius: 0%;					
 	}
 }
@@ -416,6 +416,16 @@
 		}
 	}
 }
+
+
+
+
+@media (max-height: 900px) and (orientation: landscape) {
+	.mainContainer {
+		height: calc(100vh - 80px);
+	}
+}
+
 
 
 
@@ -521,6 +531,17 @@
 		}
 	}
 }
+
+
+
+
+
+@media (max-height: 650px) and (orientation: landscape) {
+	.mainContainer {
+		height: calc(100vh - 70px);
+	}
+}
+
 
 
 
