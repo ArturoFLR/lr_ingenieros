@@ -34,25 +34,15 @@
 	}
 }
 
-@keyframes caption2Arise {
-	from {
-		top: 38%;
-		opacity: 0%;
-	}
-	to {
-		top: 13.5%;
-		opacity: 100%;
-	}
-}
 
 // Anima el enlace al proyecto mostrado en la imagen principal
 @keyframes proyectLinkArise {
 	from {
-		top: 45%;
+		left: 80%;
 		opacity: 0%;
 	}
 	to {
-		top: 20%;
+		left: 0%;
 		opacity: 100%;
 	}
 }
@@ -89,34 +79,46 @@
 	}
 }
 
-.caption, .caption2, .proyectLink {
+.captionsContainer {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	top: 4%;
 	right: 5%;
+	opacity: 0%;
+	z-index: 1;
+}
+
+.caption, .caption2, .proyectLink {
 	text-align: right;
-	font-size: 1.9rem;
+	font-size: 2.2rem;
 	font-weight: 500;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
 	color: white;
 	cursor: pointer;
-	z-index: 1;
-	opacity: 0%;
+}
+
+.caption {
+	line-height: 130%;
 }
 
 .caption2 {
-	top: 13.5%;
-	font-size: 1.5rem
+	margin-top: 1rem;
+	font-size: 1.7rem
 }
 
 .proyectLink {
-	top: 20%;
+	position: relative;
+	margin-top: 1rem;
 	text-transform: capitalize;
 	text-decoration: none;
 	border: 1px solid white;
 	padding: 0.7rem;
 	font-size: 1.3rem;
 	transition-property: background-color color;
+	z-index: 1;
 
 	&:hover {
 		transition-duration: 500ms;
@@ -128,10 +130,6 @@
 // Animaciones de los caption (textos) de la imagen:
 .captionAnimation {
 	animation: caption1Arise 1.5s forwards;
-}
-
-.caption2Animation {
-	animation: caption2Arise 2s forwards;
 }
 
 .proyectLinkArise {
@@ -253,31 +251,6 @@
 
 @media (min-width: 2200px) {
 
-// Anima el nombre del empleador en la imagen principal
-
-@keyframes caption2Arise {
-	from {
-		top: 38%;
-		opacity: 0%;
-	}
-	to {
-		top: 15.5%;
-		opacity: 100%;
-	}
-}
-
-// Anima el enlace al proyecto mostrado en la imagen principal
-@keyframes proyectLinkArise {
-	from {
-		top: 45%;
-		opacity: 0%;
-	}
-	to {
-		top: 21.5%;
-		opacity: 100%;
-	}
-}
-
 	.mainContainer {
 		height: calc(100vh - 250px);					// 250px es lo que mide el Header. Esta línea hace que el container no se salga de navegador por debajo.
 		border: 5px solid white;
@@ -293,17 +266,14 @@
 	}
 	
 	.caption, .caption2, .proyectLink {
-		right: 5%;
 		font-size: 3.9rem;
 	}
 	
 	.caption2 {
-		top: 15.5%;
 		font-size: 2.8rem
 	}
 	
 	.proyectLink {
-		top: 21.5%;
 		border: 5px solid white;
 		padding: 2rem;
 		font-size: 3rem;
@@ -355,30 +325,6 @@
 
 @media (max-height: 900px) or (max-width: 1020px) {
 
-	// Anima los textos de la imagen principal
-	@keyframes caption2Arise {
-		from {
-			top: 38%;
-			opacity: 0%;
-		}
-		to {
-			top: 14%;
-			opacity: 100%;
-		}
-	}
-
-	// Anima el enlace al proyecto mostrado en la imagen principal
-	@keyframes proyectLinkArise {
-		from {
-			top: 45%;
-			opacity: 0%;
-		}
-		to {
-			top: 22%;
-			opacity: 100%;
-		}
-	}
-
 	.mainContainer {
 
 		.darkener {
@@ -396,12 +342,10 @@
 	
 	.caption2 {
 		font-size: 1.2rem;
-		top: 14%;
 	}
 	
 	.proyectLink {
 		font-size: 1.3rem;
-		top: 22%;
 	}
 	
 	.buttonPrev, .buttonNext {
@@ -470,30 +414,6 @@
 
 
 @media (max-width: 710px) {
-
-	// Anima los textos de la imagen principal
-	@keyframes caption2Arise {
-		from {
-			top: 38%;
-			opacity: 0%;
-		}
-		to {
-			top: 18.5%;
-			opacity: 100%;
-		}
-	}
-
-	// Anima el enlace al proyecto mostrado en la imagen principal
-	@keyframes proyectLinkArise {
-		from {
-			top: 45%;
-			opacity: 0%;
-		}
-		to {
-			top: 28%;
-			opacity: 100%;
-		}
-	}
 	
 	.mainContainer {
 
@@ -509,22 +429,20 @@
 	
 	.caption2 {
 		font-size: 0.75rem;
-		top: 18.5%;
 	}
 	
 	.proyectLink {
 		font-size: 1rem;
-		top: 28%;
 	}
 	
 	.buttonPrev, .buttonNext {
-		top: 48%;
-		padding: 1.4rem;
-		font-size: 2.5rem;
+		top: 53%;
+		padding: 1.2rem;
+		font-size: 2.3rem;
 
 		&:hover {
-			padding: 1.4rem;
-			font-size: 2.5rem;
+			padding: 1.2rem;
+			font-size: 2.3rem;
 		}
 	
 		&:active {
@@ -552,53 +470,74 @@
 
 @media (max-width: 389px) {
 
-	// Anima los textos de la imagen principal
-	@keyframes caption2Arise {
-		from {
-			top: 38%;
-			opacity: 0%;
-		}
-		to {
-			top: 21.5%;
-			opacity: 100%;
-		}
-	}
-
-	// Anima el enlace al proyecto mostrado en la imagen principal
-	@keyframes proyectLinkArise {
-		from {
-			top: 45%;
-			opacity: 0%;
-		}
-		to {
-			top: 32%;
-			opacity: 100%;
-		}
-	}
-
 	.caption, .caption2, .proyectLink {
 		font-size: 0.8rem;
 	}
 	
 	.caption2 {
-		top: 21.5%;
 		font-size: 0.7rem;
 	}
 	
 	.proyectLink {
-		top: 32%;
 		padding: 0.5rem;
 		font-size: 0.9rem;
 	}
 	
 	.buttonPrev, .buttonNext {
-		top: 50%;
-		padding: 0.9rem;
-		font-size: 2rem;
+		top: 55%;
+		padding: 0.8rem;
+		font-size: 1.9rem;
 
 		&:hover {
-			padding: 0.9rem;
-			font-size: 2rem;
+			padding: 0.8rem;
+			font-size: 1.9rem;
+		}
+	
+		&:active {
+			padding: 0.5rem;
+		}
+	}
+	
+	.thumbnailContainer {
+		height: 16%;
+		border: 3px solid rgba(0, 0, 0, 0.53);
+	
+		.thumbnailSelected {
+	
+			img {
+				border: 2px solid rgba(255, 255, 255, 0.934);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+@media (max-height: 600px) and (orientation: landscape) {
+	.caption {
+		font-size: 1.1rem;
+	}
+	
+	.caption2 {
+		font-size: 0.9rem;
+	}
+	
+	.proyectLink {
+		padding: 0.5rem;
+		font-size: 1rem;
+	}
+	
+	.buttonPrev, .buttonNext {
+		top: 55%;
+		padding: 0.8rem;
+		font-size: 1.9rem;
+
+		&:hover {
+			padding: 0.8rem;
+			font-size: 1.9rem;
 		}
 	
 		&:active {

@@ -14,7 +14,6 @@ function Slideshow({ images }: SlideshowProps) {
 
 	const selectedImage = useRef(null);
 	const caption1 = useRef(null);
-	const caption2 = useRef(null);
 	const proyectLink = useRef(null);
 
 	// Esta función cambia la imagen principal del slideshow. Para ello cambia la variable imgCounter de una forma u otra según el elemento que la activa (botón next, prev o un thumbnail). Luego activa la animación de fade in / fade out, cambia la imagen principal a la indicada en imgCounter y el thumbnail seleccionado, y cuando la animación ha terminado elimina las clases que contienen la animación, para que puedan volver a ser asignadas y así volver a disparar la animación en el futuro. Por último, activa el zoom y la animación de los textos en la nueva imagen. 
@@ -74,20 +73,17 @@ function Slideshow({ images }: SlideshowProps) {
 	// Elimina las clases que activan la animación de fundido de la imagen principal y sus textos para que pueda volver a ser aplicada en el futuro. Esta función se aplica al "addEventListener" de la función changeMainImg. Se define fuera de esa función para que pueda ser utilizada por el "removeEventListener" en useEffect() (si no, estaría fuera de su ámbito).
 	function removeFadeAnimationClasses() {
 		(selectedImage.current! as HTMLImageElement).classList.remove(styles.fadeOutIn);
-		(caption1.current! as HTMLParagraphElement).classList.remove(styles.fadeCaption);
-		(caption2.current! as HTMLParagraphElement).classList.remove(styles.fadeCaption);
+		(caption1.current! as HTMLDivElement).classList.remove(styles.fadeCaption);
 		(proyectLink.current! as HTMLLinkElement).classList.remove(styles.fadeCaption);
 	}
 
 	// Anima el texto de las imágenes cuando se cambia la imagen principal con las 2 funciones anteriores
 	function animateCaptions() {
-		(caption1.current! as HTMLParagraphElement).classList.remove(styles.captionAnimation);
-		(caption2.current! as HTMLParagraphElement).classList.remove(styles.caption2Animation);
+		(caption1.current! as HTMLDivElement).classList.remove(styles.captionAnimation);
 		(proyectLink.current! as HTMLLinkElement).classList.remove(styles.proyectLinkArise);
 
 		setTimeout(() => {											// Si no usamos un setTimeout antes de volver a asignar la clase con la animación, el cambio es demasiado rápido y no es detectado por React, no funciona.
-			(caption1.current! as HTMLParagraphElement).classList.add(styles.captionAnimation);
-			(caption2.current! as HTMLParagraphElement).classList.add(styles.caption2Animation);
+			(caption1.current! as HTMLDivElement).classList.add(styles.captionAnimation);
 			(proyectLink.current! as HTMLLinkElement).classList.add(styles.proyectLinkArise);
 		}, 0);
 	}
@@ -107,14 +103,12 @@ function Slideshow({ images }: SlideshowProps) {
 		(selectedImage.current! as HTMLImageElement).style.transform = zoomLevel.transform;
 
 		(selectedImage.current! as HTMLImageElement).classList.remove(styles.fadeOutIn);
-		(caption1.current! as HTMLParagraphElement).classList.remove(styles.fadeCaption);
-		(caption2.current! as HTMLParagraphElement).classList.remove(styles.fadeCaption);
+		(caption1.current! as HTMLDivElement).classList.remove(styles.fadeCaption);
 		(proyectLink.current! as HTMLLinkElement).classList.remove(styles.fadeCaption);
 
 		setTimeout(() => {
 			(selectedImage.current! as HTMLImageElement).classList.add(styles.fadeOutIn);
-			(caption1.current! as HTMLParagraphElement).classList.add(styles.fadeCaption);
-			(caption2.current! as HTMLParagraphElement).classList.add(styles.fadeCaption);
+			(caption1.current! as HTMLDivElement).classList.add(styles.fadeCaption);
 			(proyectLink.current! as HTMLLinkElement).classList.add(styles.fadeCaption);
 		}, 0);
 	}
@@ -153,13 +147,15 @@ function Slideshow({ images }: SlideshowProps) {
 	return (
 		<div className={styles.mainContainer}>
 			<div className={styles.darkener}></div>
-			<p className={`${styles.caption} ${styles.captionAnimation}`} ref={caption1}>{mainImg.caption}</p>
-			<p className={`${styles.caption2} ${styles.caption2Animation}`} ref={caption2}>{mainImg.caption2}</p>
-			<Link to="/proyectos" ref={proyectLink} state={{imageUrl: mainImg.path, caption1: mainImg.caption, caption2: mainImg.caption2 }}
-				className={`${styles.proyectLink} ${styles.proyectLinkArise}`}
-			>
+			<div className={`${styles.captionsContainer} ${styles.captionAnimation}`} ref={caption1} >
+				<p className={styles.caption}>{mainImg.caption}</p>
+				<p className={styles.caption2}>{mainImg.caption2}</p>
+				<Link to="/proyectos" ref={proyectLink} state={{imageUrl: mainImg.path, caption1: mainImg.caption, caption2: mainImg.caption2 }}
+					className={`${styles.proyectLink} ${styles.proyectLinkArise}`}
+				>
 				Ver Proyecto
-			</Link>
+				</Link>
+			</div>
 			<img className={`${styles.selectedImg} ${styles.selectedImgZoomIn}`} src={mainImg.path[0]} alt="" ref={selectedImage}></img>
 			<button className={styles.buttonPrev} type="button" onClick={(event) => changeMainImg(event, "prev")}>&lt;</button>
 			<button className={styles.buttonNext} type="button" onClick={(event) => changeMainImg(event, "next")}>&gt;</button>
