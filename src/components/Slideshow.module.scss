@@ -167,7 +167,7 @@
 	color: white;
 	font-size: 3rem;
 	font-weight: 500;
-	background-color: rgba(0, 0, 0, 0.103);
+	background-color: rgba(0, 0, 0, 0.173);
 	border: 0px solid rgba(255, 255, 255, 0.455);
 	transition-property: background-color, border, padding;
 	transition-duration: 200ms;
@@ -421,6 +421,31 @@
 
 
 
+@media (max-width: 800px) {
+	.buttonPrev, .buttonNext {
+		padding: 2rem;
+		font-size: 3rem;
+
+		&:hover {
+			padding: 2rem;
+			font-size: 3rem;
+			background-color: rgba(0, 0, 0, 0.173);
+			border: 0px solid rgba(255, 255, 255, 0.455);
+		}
+	
+		&:active {
+			padding: 1.3rem;
+			background-color: rgba(0, 0, 0, 0.349);
+			border: 2px solid rgba(255, 255, 255, 0.796);
+		}
+	}
+}
+
+
+
+
+
+
 @media (max-width: 710px) {
 
 	// Anima los textos de la imagen principal
@@ -471,15 +496,16 @@
 	
 	.buttonPrev, .buttonNext {
 		top: 48%;
-		padding: 1rem;
+		padding: 1.4rem;
 		font-size: 2.5rem;
 
 		&:hover {
-			padding: 1.5rem;
+			padding: 1.4rem;
+			font-size: 2.5rem;
 		}
 	
 		&:active {
-			padding: 1rem;
+			padding: 0.9rem;
 		}
 	}
 	
@@ -543,15 +569,16 @@
 	
 	.buttonPrev, .buttonNext {
 		top: 50%;
-		padding: 0.6rem;
+		padding: 0.9rem;
 		font-size: 2rem;
 
 		&:hover {
-			padding: 1rem;
+			padding: 0.9rem;
+			font-size: 2rem;
 		}
 	
 		&:active {
-			padding: 0.7rem;
+			padding: 0.5rem;
 		}
 	}
 	
