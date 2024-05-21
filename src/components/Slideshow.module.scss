@@ -420,7 +420,20 @@
 
 
 
-@media (max-height: 900px) and (orientation: landscape) {
+
+
+@media (max-height: 900px) and (max-width: 900px) and (orientation: landscape) {
+	.mainContainer {
+		height: calc(100vh - 80px);
+	}
+}
+
+
+
+
+
+
+@media (max-height: 600px) and (max-width: 900px) and (orientation: landscape) {
 	.mainContainer {
 		height: calc(100vh - 80px);
 	}
@@ -529,16 +542,6 @@
 				border: 2px solid rgba(255, 255, 255, 0.934);
 			}
 		}
-	}
-}
-
-
-
-
-
-@media (max-height: 650px) and (orientation: landscape) {
-	.mainContainer {
-		height: calc(100vh - 70px);
 	}
 }
 

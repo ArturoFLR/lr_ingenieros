@@ -432,3 +432,53 @@
 		}
 	}
 }
+
+
+
+
+
+@media (max-height: 600px) and (orientation: landscape) {
+	
+	.imageContainer {
+		width: 70vw;
+		height: 30vw;
+
+	}
+	
+	.filter {
+		width: 70vw;
+		height: 30vw;
+	
+		.mainImg, .prevImg, .nextImg {
+			width: 70vw;
+	
+			img {
+				width: 70vw;
+			}
+		}
+	}
+	
+	.closeIcon {
+		top: -6%;
+		right: -3%;
+		width: 40px;
+		height: 40px;
+		font-size: 23px;
+	}
+	
+	.cardboardContainer {
+		width: 85vw;
+		height: 80px;
+		margin-top: 0.5rem;
+		padding: 0.5rem 3.7rem 1rem 1.2rem;
+	
+		.title {
+			font-size: 0.9rem;
+		}
+	
+		.employer {
+			font-size: 0.8rem;
+			margin-top: 0.5rem;
+		}
+	}
+}
