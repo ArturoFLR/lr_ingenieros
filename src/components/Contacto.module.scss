@@ -27,7 +27,7 @@
 	align-items: center;
 	width: 65%;
 	margin: auto;
-	height: calc(100vh - 230px);
+	height: calc(100vh - 340px);
 	background-color: white;
 	background-image: url("@/backgrounds/graph_paper1.jpg");
 	background-repeat: repeat-x;
@@ -324,6 +324,84 @@
 	
 		.lineSuper, .lineInfer {
 			width: 450px;
+		}
+	}
+}
+
+
+
+
+
+
+@media (max-height: 650px) {
+	.mainContainer {
+		height: 90vh;
+	}
+	
+	.frame {
+		width: 290px;
+		height: 170px;
+		padding: 1rem 1.2rem;
+	
+		.header {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+	
+		.subHeader {
+			font-size: 1rem;
+		}
+	
+		.mailParagraph {
+			font-size: 1.1rem;
+			margin-top: 1.5rem;
+		}
+	
+		.lineLatLeft, .lineLatRight {
+			height: 280px;
+		}
+	
+		.lineSuper, .lineInfer {
+			width: 450px;
+		}
+	}
+}
+
+
+
+
+
+@media (max-height: 380px) {
+	.mainContainer {
+		height: 90vh;
+	}
+	
+	.frame {
+		width: 425px;
+		height: 120px;
+		padding: 0.8rem 1rem;
+		margin-top: -1.4rem;
+	
+		.header {
+			font-size: 1.5rem;
+			margin-bottom: 0.8rem;
+		}
+	
+		.subHeader {
+			font-size: 1rem;
+		}
+	
+		.mailParagraph {
+			font-size: 1.1rem;
+			margin-top: 1.2rem;
+		}
+	
+		.lineLatLeft, .lineLatRight {
+			height: 230px;
+		}
+	
+		.lineSuper, .lineInfer {
+			width: 570px;
 		}
 	}
 }

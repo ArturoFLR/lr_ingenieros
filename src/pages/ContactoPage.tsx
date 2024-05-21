@@ -6,7 +6,7 @@ import styles from "./ContactoPage.module.scss";
 
 function ContactoPage() {
 	return (
-		<>
+		<div className={styles.mainContainer}>
 			<Helmet>
 				<title>RL Ingenieros - Contacto</title>
 			</Helmet>
@@ -22,7 +22,7 @@ function ContactoPage() {
 			</main>
 
 			<Footer />
-		</>
+		</div>
 	);
 }
 
