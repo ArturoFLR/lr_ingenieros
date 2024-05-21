@@ -83,6 +83,12 @@
 			border: 2px solid $White;
 			scale: 1.2;
 		}
+
+		&:active {
+			background-color: $BlackTransparent;
+			border: 2px solid $White;
+			scale: 0.8;
+		}
 	}
 
 	.buttonPrev {
@@ -320,6 +326,34 @@
 
 
 
+@media (max-width: 800px) {
+
+	.filter {
+	
+		.buttonPrev, .buttonNext {
+			top: 45%;
+			padding: 1.5rem;
+			font-size: 35px;
+
+			&:hover {
+				background-color: $BlackVeryTransparent;
+				border: 0px solid $White;
+				scale: 1;
+			}
+
+			&:active {
+				background-color: $BlackTransparent;
+				border: 2px solid $White;
+				scale: 0.8;
+			}
+		}
+	}
+}
+
+
+
+
+
 
 @media (max-width: 750px) {
 	
@@ -339,12 +373,6 @@
 			img {
 				width: 91vw;
 			}
-		}
-	
-		.buttonPrev, .buttonNext {
-			top: 45%;
-			padding: 1.5rem;
-			font-size: 35px;
 		}
 	}
 	
@@ -369,6 +397,38 @@
 		.employer {
 			font-size: 0.8rem;
 			margin-top: 0.5rem;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 500px) {
+
+	.filter {
+	
+		.buttonPrev, .buttonNext {
+			top: 40%;
+			padding: 1.1rem;
+			font-size: 30px;
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 350px) {
+
+	.filter {
+	
+		.buttonPrev, .buttonNext {
+			top: 40%;
+			padding: 1rem;
+			font-size: 25px;
 		}
 	}
 }
