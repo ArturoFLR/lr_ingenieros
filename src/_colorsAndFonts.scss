@@ -1,17 +1,18 @@
 //FUENTES
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
-	/* font-family: 'Roboto Condensed', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-	/* font-family: 'PT Sans', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+/* font-family: 'Roboto Condensed', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+/* font-family: 'PT Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&display=swap");
 /* font-family: 'Catamaran', sans-serif; */
 
-
 // COLORS
-$Text_Important: rgb(70,111,169);
+$Text_Important: rgb(70, 111, 169);
 $Text_Paragraph: rgb(118, 117, 117);
-$NavLink: rgb(83,106,133);
+$NavLink: rgb(83, 106, 133);
 $NavLinkSelected: rgb(59, 66, 77);
+$MovileMenuDecorator: #f4f7fa;
+$MovileMenuDecorator2: #e4edf5;
 $Black: black;
 $BlackTransparent: rgba(0, 0, 0, 0.736);
 $BlackVeryTransparent: rgba(0, 0, 0, 0.149);
