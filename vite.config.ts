@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
-	base: "/",
+	base: "/lr_ingenieros/",
 	resolve: {
 		alias: {
 			"@": path.resolve(__dirname, "./public")
