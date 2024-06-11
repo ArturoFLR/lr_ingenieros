@@ -1,24 +1,40 @@
-@use "../colorsAndFonts" as * ;
+@use "../colorsAndFonts" as *;
 
 // ANIMATIONS
 @keyframes fadeIn {
-	0% { opacity: 0%;}
-	100% {opacity: 100%;}
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
 }
 
 @keyframes trasparentToWhiteBg {
-	0% {background-color: transparent;}
-	100% {background-color: white;}
+	0% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: white;
+	}
 }
 
 @keyframes latLineMoving {
-	0% {top: 150%}
-	100% {top: -65px}
+	0% {
+		top: 150%;
+	}
+	100% {
+		top: -65px;
+	}
 }
 
 @keyframes horizLineMoving {
-	0% {left: 200%}
-	100% {left: -80px}
+	0% {
+		left: 200%;
+	}
+	100% {
+		left: -80px;
+	}
 }
 
 .mainContainer {
@@ -44,7 +60,7 @@
 	width: 440px;
 	height: 230px;
 	padding: 2rem 2.5rem;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
 	text-align: center;
 
 	.header {
@@ -59,7 +75,7 @@
 		font-size: 1.3rem;
 		font-weight: 800;
 		color: $Text_Paragraph;
-		font-family: 'PT Sans', sans-serif;
+		font-family: "PT Sans", sans-serif;
 		opacity: 0%;
 	}
 
@@ -84,7 +100,8 @@
 		position: absolute;
 	}
 
-	.lineLatLeft, .lineLatRight {
+	.lineLatLeft,
+	.lineLatRight {
 		top: -65px;
 		height: 365px;
 		width: 15px;
@@ -102,7 +119,8 @@
 		animation: latLineMoving 1.5s forwards;
 	}
 
-	.lineSuper, .lineInfer {
+	.lineSuper,
+	.lineInfer {
 		width: 600px;
 		height: 10px;
 		left: -80px;
@@ -121,140 +139,122 @@
 	}
 }
 
-
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////// MEDIA QUERIES
 
 @media (min-width: 2200px) {
 	.mainContainer {
 		height: calc(100vh - 230px);
 	}
-	
+
 	.frame {
 		width: 800px;
 		height: 418px;
 		padding: 3rem 3rem;
-	
+
 		.header {
 			font-size: 4rem;
 			margin-bottom: 2.5rem;
 		}
-	
+
 		.subHeader {
 			font-size: 2.5rem;
 		}
-	
+
 		.mailParagraph {
 			font-size: 2.5rem;
 			margin-top: 4rem;
 		}
-	
-		.lineLatLeft, .lineLatRight {
+
+		.lineLatLeft,
+		.lineLatRight {
 			top: -65px;
 			height: 550px;
 			width: 20px;
 		}
-	
+
 		.lineLatLeft {
 			left: -10px;
 		}
-	
+
 		.lineLatRight {
 			right: -10px;
 		}
-	
-		.lineSuper, .lineInfer {
+
+		.lineSuper,
+		.lineInfer {
 			width: 950px;
 			height: 20px;
 			left: -80px;
 		}
-	
+
 		.lineSuper {
 			top: -10px;
 		}
-	
+
 		.lineInfer {
 			bottom: -7px;
 		}
 	}
 }
 
-
-
-
-
-
 @media (min-width: 3000px) {
 	.mainContainer {
 		height: calc(100vh - 250px);
 	}
-	
+
 	.frame {
 		width: 1400px;
 		height: 731px;
 		padding: 5rem 5rem;
-	
+
 		.header {
 			font-size: 6.5rem;
 			margin-bottom: 5rem;
 		}
-	
+
 		.subHeader {
 			font-size: 4rem;
 		}
-	
+
 		.mailParagraph {
 			font-size: 4rem;
 			margin-top: 8rem;
 		}
-	
-		.lineLatLeft, .lineLatRight {
+
+		.lineLatLeft,
+		.lineLatRight {
 			height: 880px;
 			width: 25px;
 		}
-	
-		.lineSuper, .lineInfer {
+
+		.lineSuper,
+		.lineInfer {
 			width: 1580px;
 			height: 25px;
 		}
-	
+
 		.lineSuper {
 			top: -13px;
 		}
 	}
 }
 
-
-
-
-
-
 @media (orientation: portrait) {
 	.mainContainer {
 		align-items: flex-start;
 		height: 80vh;
 	}
-	
+
 	.frame {
 		margin-top: 12vh;
 	}
 }
 
-
-
-
-
 @media (max-width: 1250px) {
 	.mainContainer {
-		width: 100%;
+		width: 80%;
 	}
 }
-
-
-
 
 @media (max-width: 500px) {
 	.mainContainer {
@@ -265,34 +265,32 @@
 		width: 270px;
 		height: 220px;
 		padding: 1.5rem 2rem;
-	
+
 		.header {
 			font-size: 1.8rem;
 			margin-bottom: 1rem;
 		}
-	
+
 		.subHeader {
 			font-size: 1.2rem;
 		}
-	
+
 		.mailParagraph {
 			font-size: 1.3rem;
 			margin-top: 1.5rem;
 		}
-	
-		.lineLatLeft, .lineLatRight {
-			height: 325px;
+
+		.lineLatLeft,
+		.lineLatRight {
+			height: 335px;
 		}
-	
-		.lineSuper, .lineInfer {
+
+		.lineSuper,
+		.lineInfer {
 			width: 420px;
 		}
 	}
 }
-
-
-
-
 
 @media (max-width: 350px) {
 	.mainContainer {
@@ -303,104 +301,101 @@
 		width: 260px;
 		height: 215px;
 		padding: 1.5rem 2rem;
-	
+
 		.header {
 			font-size: 1.8rem;
 			margin-bottom: 1rem;
 		}
-	
+
 		.subHeader {
 			font-size: 1.2rem;
 		}
-	
+
 		.mailParagraph {
 			font-size: 1.3rem;
 			margin-top: 1.5rem;
 		}
-	
-		.lineLatLeft, .lineLatRight {
-			height: 325px;
+
+		.lineLatLeft,
+		.lineLatRight {
+			height: 335px;
 		}
-	
-		.lineSuper, .lineInfer {
+
+		.lineSuper,
+		.lineInfer {
 			width: 450px;
 		}
 	}
 }
-
-
-
-
-
 
 @media (max-height: 650px) {
 	.mainContainer {
 		height: 90vh;
 	}
-	
+
 	.frame {
 		width: 290px;
 		height: 170px;
 		padding: 1rem 1.2rem;
-	
+
 		.header {
 			font-size: 1.6rem;
 			margin-bottom: 1rem;
 		}
-	
+
 		.subHeader {
 			font-size: 1rem;
 		}
-	
+
 		.mailParagraph {
 			font-size: 1.1rem;
 			margin-top: 1.5rem;
 		}
-	
-		.lineLatLeft, .lineLatRight {
+
+		.lineLatLeft,
+		.lineLatRight {
 			height: 280px;
 		}
-	
-		.lineSuper, .lineInfer {
+
+		.lineSuper,
+		.lineInfer {
 			width: 450px;
 		}
 	}
 }
 
-
-
-
-
 @media (max-height: 380px) {
 	.mainContainer {
 		height: 90vh;
 	}
-	
+
 	.frame {
 		width: 425px;
 		height: 120px;
 		padding: 0.8rem 1rem;
 		margin-top: -1.4rem;
-	
+
 		.header {
 			font-size: 1.5rem;
 			margin-bottom: 0.8rem;
 		}
-	
+
 		.subHeader {
 			font-size: 1rem;
 		}
-	
+
 		.mailParagraph {
 			font-size: 1.1rem;
 			margin-top: 1.2rem;
 		}
-	
-		.lineLatLeft, .lineLatRight {
+
+		.lineLatLeft,
+		.lineLatRight {
 			height: 230px;
 		}
-	
-		.lineSuper, .lineInfer {
+
+		.lineSuper,
+		.lineInfer {
 			width: 570px;
 		}
 	}
