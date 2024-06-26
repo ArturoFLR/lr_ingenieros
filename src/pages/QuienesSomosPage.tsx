@@ -8,6 +8,10 @@ function QuienesSomosPage() {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="L&R Ingenieros es un equipo de profesionales freelance, dedicados al desarrollo de proyectos y estudios en el ámbito de las instalaciones en edificación desde hace más de 20 años."
+				/>
 				<title>RL Ingenieros - Quienes Somos</title>
 			</Helmet>
 

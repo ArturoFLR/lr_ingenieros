@@ -10,6 +10,10 @@ function Home() {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="L&R Ingenieros ofrece las mejores soluciones a tus proyectos de instalaciones en edificiación."
+				/>
 				<title>RL Ingenieros - Inicio</title>
 			</Helmet>
 
