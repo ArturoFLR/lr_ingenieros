@@ -8,6 +8,10 @@ function ProyectosPage() {
 	return (
 		<>
 			<Helmet>
+				<meta
+					name="description"
+					content="Una pequeña muestra de los proyectos en los que L&R Ingenieros ha participado."
+				/>
 				<title>RL Ingenieros - Proyectos</title>
 			</Helmet>
 
