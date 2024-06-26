@@ -9,11 +9,10 @@
 }
 
 body {
-	background-image: url("@/backgrounds/fondo_principal2.jpg");
+	background-image: url("/backgrounds/fondo_principal2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	min-height: 100vh;
 	overflow-x: hidden;
 }
-
