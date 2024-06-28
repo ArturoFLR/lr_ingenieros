@@ -14,7 +14,7 @@ function Home() {
 					name="description"
 					content="L&R Ingenieros ofrece las mejores soluciones a tus proyectos de instalaciones en edificiación."
 				/>
-				<title>RL Ingenieros - Inicio</title>
+				<title>L&R Ingenieros - Inicio</title>
 			</Helmet>
 
 			<div className={styles.header}>

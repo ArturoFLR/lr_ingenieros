@@ -9,7 +9,7 @@ function ProyectosPage() {
 		<>
 			<Helmet>
 				<meta name="description" content="Algunos de los proyectos en los que L&R Ingenieros ha participado." />
-				<title>RL Ingenieros - Proyectos</title>
+				<title>L&R Ingenieros - Proyectos</title>
 			</Helmet>
 
 			<div className={styles.header}>

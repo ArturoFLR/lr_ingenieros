@@ -12,7 +12,7 @@ function QuienesSomosPage() {
 					name="description"
 					content="Somos un equipo de profesionales freelance, dedicados al desarrollo de proyectos y estudios en el ámbito de las instalaciones en edificación desde hace más de 20 años."
 				/>
-				<title>RL Ingenieros - Quienes Somos</title>
+				<title>L&R Ingenieros - Quienes Somos</title>
 			</Helmet>
 
 			<div className={styles.header}>

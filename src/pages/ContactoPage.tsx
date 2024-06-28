@@ -9,7 +9,7 @@ function ContactoPage() {
 		<div className={styles.mainContainer}>
 			<Helmet>
 				<meta name="description" content="Información de contacto de L&R Ingenieros." />
-				<title>RL Ingenieros - Contacto</title>
+				<title>L&R Ingenieros - Contacto</title>
 			</Helmet>
 
 			<div className={styles.header}>
