@@ -1,8 +1,10 @@
 .mainContainer {
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 2rem;
+	height: 100vh;
 }
 
 .header {
@@ -19,8 +21,6 @@ main {
 	}
 }
 
-
-
 // MEDIA QUERIES
 
 @media (min-width: 2200px) {
@@ -29,20 +29,17 @@ main {
 	}
 }
 
-
 @media (max-width: 900px) {
 	.header {
 		height: 80px;
 	}
 }
 
-
 @media (max-width: 650px) {
 	.header {
 		height: 70px;
 	}
 }
-
 
 @media (max-height: 650px) and (orientation: landscape) {
 	.mainContainer {
